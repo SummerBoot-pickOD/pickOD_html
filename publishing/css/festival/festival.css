@@ -5,5 +5,127 @@
 
 main{
   margin:176px 300px;
-  background-color: blanchedalmond;
+  /* background-color: blanchedalmond; */
+}
+
+.search{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search form{
+  margin: 25px 0px;
+  position: relative;
+  width: 370px;
+  height: 35px;
+}
+
+input{
+  padding-left: 15px;
+  border-radius: 15px;
+  width: 100%;
+  height:100%;
+  border: 1px solid #F68791 ;
+}
+
+.search button{
+  position: absolute;
+  top: 4px;
+  bottom: 5px;
+  right: 5px;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  background:transparent url("../../img/festival/searchIcon.png") center center / 26px scroll no-repeat;
+  cursor: pointer;
+}
+
+.total_area_wrap{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 30px 70px 30px;
+}
+
+.total_area_btn{
+  width: 45px;
+  height: 20px;
+  border:0;
+  cursor: pointer; 
+  background:gainsboro;
+  margin-left: 5px;
+  border-radius:5px 5px 0px 0px;
+
+}
+
+.tag_area{
+  display: flex;
+  background-color: #FEF2F2;
+  padding: 10px;
+  height: 200px;
+  border-radius: 10px;
+  align-items:flex-start;
+}
+
+
+
+.tag_area_seoul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
+  margin-right: 25px;
+ }
+ 
+.tag_area_geonggi{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
+}  
+
+.tag_area button{
+  border: 0;
+  cursor: pointer;
+  background: #FEF2F2;
+  margin: 5px 10px;
+}
+
+.tag_area li button{
+  border: 1px  solid #FEF2F2 ;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+
+.festival-list{
+  display: flex;
+  flex-wrap : wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.festival-info a{
+  color: black;
+  text-decoration: none;
+}
+
+.festival-info span{
+  font-size: 12px;
+}
+
+.festival-img img{
+  width: 230px;
+  height: 160px;
+  border-radius: 10px;
+}
+
+
+.festival-list li{
+  padding: 30px 0 30px 0;
+} 
+ 
+.festival-info{
+  display: flex;
+  flex-direction: column;
 }

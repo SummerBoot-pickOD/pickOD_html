@@ -8,13 +8,18 @@ header{
   z-index: 999;
   top: 0px;
   left: 0px;
+  right: 0px;
   background-color: #ffffff;
-  border-bottom: 1px solid #F68791 ;
+  /* border-bottom: 1px solid #F68791 ; */
+  box-shadow: 0 3px 3px rgba(0, 0, 0,0.1);
   margin-bottom: 300px;
+
 }
+
 ul,li{
   list-style: none;
 } 
+
 a{
   text-decoration: none;
 }
@@ -35,7 +40,9 @@ a{
 }
 
 .nav_menu a{
-  margin:0px 47px;
+  margin-right: 50px;
+  margin-left: 10px;
+
   color: black;
   font-size: 16px;
   font-weight: 600;
@@ -43,6 +50,6 @@ a{
 } 
 .header_icon a img{
   margin-left: 15px;
-  width: 37px;
-  height: 37px;
+  width: 30px;
+  height: 30px;
 } 
