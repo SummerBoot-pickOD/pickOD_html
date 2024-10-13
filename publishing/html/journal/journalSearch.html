@@ -4,33 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>너와 나의 여행 발자국</title>
+    <link rel="stylesheet" href="../../css/journal/journalSearch.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/abd96c8f9a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>너와 나의 여행 발자국</h1>
-    <div>
+    <div class="page-name">너와 나의 여행 발자국</div>
+    <div class="search-box-container">
         <form class="search-box" action="" method="get">
-            <input class="search-text" type="text" name="" placeholder="검색어를 입력하세요.">
+            <input class="search-text" type="text" name="" placeholder="검색어를 입력하세요." onfocus="this.placeholder=''" onblur="this.placeholder='아이디를 입력 해 주세요.'">
             <button class="search-btn" type="submit">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
     </div>
-    <div>
-        <div>
-            <p>총 개</p>
-            <p>최신순</p>
-            <p>|</p>
-            <p>찜하기순</p>
-            <p>|</p>
-            <p>선정 발자국</p>
-        </div>
-        <div>
-            <a href="#" class="">
-                <img src="" alt="">
-                <div>게시글 제목</div>
-            </a>
+    <div class="hashteg">
+        <div class="hash-container-outline">
+            <div class="hash-container-left">
+                
+            </div>
+            <div class="hash-container-center">
+                
+            </div>
+            <div class="hash-container-right">
+                
+            </div>
         </div>
     </div>
+    <div>
+        <div class="content-menu">
+            <div class="content-total">총 <span id="total-posts">0</span>개</div>
+            <div class="content-latest">최신순</div>
+            <div class="wall">|</div>
+            <div class="content-pick">찜하기순</div>
+            <div class="wall">|</div>
+            <div class="content-chosen">선정 발자국</div>
+        </div>
+
+        <div>
+            
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="posts" id="posts"></div>
+        <div class="pagination" id="pagination"></div>
+    </div>
+    <script src="../../js/journal/journalSearch.js"></script>
+    <div id="footer"></div>
+    <div id="header"></div>
+    
 </body>
+<script>
+    $(function () {
+  $("#header").load("../main/header.html");
+});
+
+$(function () {
+  $("#footer").load("../main/footer.html");
+});
+</script>
 </html>
