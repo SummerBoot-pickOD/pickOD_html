@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 0px 300px;
+}
+
+h1 {
+  padding-top: 76px;
+  font-size: 36;
+}
+
+.container {
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+.search {
+  background-color: #F2F2F2;
+}
+
+/* 전체, 제제 걔네 */
+label {
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  padding-right: 70px;
+  margin: 6px 30px 6px 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+select {
+  padding: 5px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 3px;
+  background-color: #A1A1A1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.table-head {
+  background-color: #F2F2F2;
+}
+
+th {
+  padding: 5px 0px;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+td {
+  border: 1px solid #F2F2F2;
+  padding: 5px 0px;
+  text-align: center;
+  border-left: none;
+}
+
+.last-col {
+  border-right: none;
+}
