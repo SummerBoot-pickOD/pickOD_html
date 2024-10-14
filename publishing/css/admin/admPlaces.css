@@ -7,7 +7,7 @@ main {
   margin: 0px 300px;
 }
 
-.journal-mgmt {
+.places-mgmt {
   padding-top: 110px;
   font-size: 36;
 }
@@ -95,14 +95,7 @@ td {
   border-left: none;
 }
 
-.title {
-  max-width: 180px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding: 0px 5px;
-}
-
+.title,
 .content {
   max-width: 230px;
   overflow: hidden;
