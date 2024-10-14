@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Journal Management</title>
+  <link rel="stylesheet" href="../../css/admin/admJournal.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="../../js/admin/admJournal.js" defer></script>
+</head>
+
+<body>
+  <div id="header"></div>
+  <main>
+    <div class="posts">
+      <h1 class="journal-mgmt">여행 발자국 관리</h1>
+      <div class="container">
+        <div class="search">
+          <select id="condition">
+            <option value="" disabled selected>조건을 선택하세요</option>
+            <option value="name">성명</option>
+            <option value="nick">닉네임</option>
+            <option value="title">제목</option>
+          </select>
+          <input type="text" placeholder="검색어를 입력하세요." />
+          <label><input type="radio" name="status" value="total" checked>전체</label>
+          <label><input type="radio" name="status" value="normal" checked>정상등록</label>
+          <label><input type="radio" name="status" value="temp">임시저장</label>
+          <button type="button" class="enter">검색</button>
+        </div>
+
+        <table>
+          <tr class="table-head">
+            <th>아이디</th>
+            <th>성명</th>
+            <th>닉네임</th>
+            <th>여행 발자국</th>
+            <th>찜하기 수</th>
+            <th>상세보기</th>
+          </tr>
+
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="title">2박 3일 힐링 대부도 나들이</td>
+            <td>50</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="title">친구들과 2박 3일 힐링 대부도 나들이</td>
+            <td>50</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="title">당일치기로 빠르게 다녀온 추억 여행</td>
+            <td>50</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="title">2박 3일 힐링 대부도 나들이</td>
+            <td>50</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="title">2박 3일 힐링 대부도 나들이</td>
+            <td>50</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="title">2박 3일 힐링 대부도 나들이</td>
+            <td>50</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="title">2박 3일 힐링 대부도 나들이</td>
+            <td>50</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="title">2박 3일 힐링 대부도 나들이</td>
+            <td>50</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="title">2박 3일 힐링 대부도 나들이</td>
+            <td>50</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="title">2박 3일 힐링 대부도 나들이</td>
+            <td>50</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="title">2박 3일 힐링 대부도 나들이</td>
+            <td>50</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <!-- 맨 아래칸, 그냥 회색 섹션으로 만들고 싶음. -->
+          <tr>
+            <td colspan="7" class="last-row"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="replies">
+      <h1 class="replies-mgmt">댓글 관리</h1>
+      <div class="container">
+        <div class="search">
+          <select id="condition">
+            <option value="" disabled selected>조건을 선택하세요</option>
+            <option value="name">성명</option>
+            <option value="nick">닉네임</option>
+          </select>
+          <input type="text" placeholder="검색어를 입력하세요." />
+          <button type="button" class="enter">검색</button>
+        </div>
+
+        <table>
+          <tr class="table-head">
+            <th>아이디</th>
+            <th>성명</th>
+            <th>닉네임</th>
+            <th>댓글 내용</th>
+            <th>상세보기</th>
+          </tr>
+
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="content">오 엄청난 여행인걸요. 저도 꼭 따라해봐야겠어요. 앞으로도 즐거운 여행 하세요.</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+
+          <!-- 맨 아래칸, 그냥 회색 섹션으로 만들고 싶음. -->
+          <tr>
+            <td colspan="7" class="last-row"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </main>
+  <div id='footer'></div>
+</body>
+
+</html>

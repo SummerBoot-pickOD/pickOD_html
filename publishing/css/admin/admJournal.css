@@ -7,9 +7,14 @@ main {
   margin: 0px 300px;
 }
 
-h1 {
+.journal-mgmt {
   padding-top: 110px;
   font-size: 36;
+}
+
+.replies-mgmt {
+  padding-top: 50px;
+  font-size: 36px;
 }
 
 .container {
@@ -31,6 +36,7 @@ h1 {
   border: none;
   border-radius: 20px;
   cursor: pointer;
+  margin-left: 15px;
 
 }
 
@@ -87,6 +93,15 @@ td {
   padding: 5px 0px;
   text-align: center;
   border-left: none;
+}
+
+.title,
+.content {
+  max-width: 250px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0px 5px;
 }
 
 .last-col {
