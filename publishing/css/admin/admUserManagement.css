@@ -20,6 +20,8 @@ h1 {
 
 .search {
   background-color: #FAFAFA;
+  display: flex;
+  align-items: center;
 }
 
 .enter {
@@ -79,7 +81,9 @@ th {
 }
 
 td {
-  border: 1px solid #E9E9E9;
+  border: 1px solid #fbfbfb;
+  border-top: none;
+  border-bottom: none;
   padding: 5px 0px;
   text-align: center;
   border-left: none;
