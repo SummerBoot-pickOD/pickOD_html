@@ -6,11 +6,15 @@
   <title>마이페이지</title>
   <link rel="stylesheet" href="../../css/mypage/myPage.css">
   <script defer src="../../js/mypage/myPage.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+  
 </head>
 <body>
   <form action="#" method="get">
+    
     <header>
-      <h1>헤더영역</h1>
+      <div id='header'></div>
     </header>
     <main>
       <section class="user-profile">
@@ -432,8 +436,17 @@
       </section>  
     </main>
     <footer>
-      <h1>푸터영역</h1>
+      <div id='footer'></div>
     </footer>
   </form>
 </body>
+<script>
+  $(function () {
+  $("#header").load("../main/header.html");
+  });
+
+  $(function () {
+  $("#footer").load("../main/footer.html");
+  });
+</script>
 </html>

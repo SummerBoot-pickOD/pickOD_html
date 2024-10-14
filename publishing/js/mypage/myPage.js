@@ -1,4 +1,4 @@
-let btnCheckList = document.querySelector('.btn-checklist')
+let btnCheckList = document.querySelector('.btn-checklist');
 let checkListContainer = document.querySelector('.checklist-container');
 
 let btnTripList = document.querySelector('.btn-triplist');

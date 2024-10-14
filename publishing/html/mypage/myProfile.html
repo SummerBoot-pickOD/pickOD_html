@@ -6,11 +6,13 @@
   <title>내프로필수정</title>
   <link rel="stylesheet" href="../../css/mypage/myProfile.css">
   <script defer src="../../js/mypage/myProfile.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
 </head>
 <body>
   <form action="">
     <header>
-      <h1>헤더영역</h1>
+      <div id='header'></div>
     </header>
     <main>
       <section>
@@ -21,10 +23,44 @@
           </div>
         </div>
       </section>
+      <section>
+        <div class="profile-containerbox">
+          <div class="profile-picturebox"><img src="../../img/mypage/기본사람사진.png" alt="프로필사진"></div>
+          <div class="picture-uploadbox">
+            <div class="upload-local">
+              <div class="upload-img"><img src="../../img/mypage/로컬사진.png" alt="로컬에서불러오기"></div>
+              <div class="img-content">라이브러리에서 불러오기</div>
+            </div>
+            <div class="upload-basic">
+              <div class="upload-img"><img src="../../img/mypage/기본사진.png" alt="기본제공사진"></div>
+              <div class="img-content">기본제공사진 불러오기</div>
+            </div>
+            <div class="delete-img">
+              <div class="upload-img"><img src="../../img/mypage/삭제사진.png" alt="삭제사진"></div>
+              <div class="img-content">현재사진 삭제하기</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="provideimg-containerbox">
+        <div class="provideimg-title">기본제공사진불러오기</div>
+        <div class="provideimg-box">
+          
+        </div>
+      </section>
     </main>
     <footer>
-      <h1>푸터영역</h1>
+      <div id='footer'></div>
     </footer>
   </form>  
 </body>
+<script>
+  $(function () {
+  $("#header").load("../main/header.html");
+  });
+
+  $(function () {
+  $("#footer").load("../main/footer.html");
+  });
+</script>
 </html>
