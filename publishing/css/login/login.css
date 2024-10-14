@@ -14,7 +14,7 @@ body {
 }
 
 main{
-  margin: 265px 720px;
+  margin: 110px 720px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,6 +88,7 @@ button:hover {
 
 .login-service-container{
   padding-top:10px;
+  font-size:13px;
   display : flex;
   justify-content: center;
   color: black;
@@ -115,7 +116,7 @@ button:hover {
 }
 
 #quick-login-kakao{
-  background-color: yellow;
+  background-color: #fee404;
 }
 
 #quick-login-google{
