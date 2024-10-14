@@ -14,7 +14,8 @@ function displayPosts() {
     currentPosts.forEach(post => {
         const postDiv = document.createElement('div');
         postDiv.className = 'post-container';
-        
+
+        // 이미지 추가
         const img = document.createElement('img');
         img.className = 'post-image';
         img.src = 'https://via.placeholder.com/300'; // 예시 이미지
@@ -28,6 +29,29 @@ function displayPosts() {
         titleDiv.textContent = post;
 
         postDiv.appendChild(titleDiv); // 제목을 이미지 하단에 추가
+
+        // 오른쪽 하단에 png 파일을 추가
+        const pngImage = document.createElement('img');
+        pngImage.className = 'toggle-image';
+        pngImage.src = '../../img/journal/footprint.png'; // 처음에 표시할 PNG 파일
+        pngImage.alt = '';
+        pngImage.style.position = 'absolute';
+        pngImage.style.bottom = '10px';
+        pngImage.style.right = '10px';
+        pngImage.style.width = '50px'; // 크기 조정
+        pngImage.style.cursor = 'pointer';
+
+        // 클릭 시 다른 이미지로 변경
+        pngImage.addEventListener('click', function() {
+            if (pngImage.src.includes('../../img/journal/footprint_pick.png')) {
+                pngImage.src = '../../img/journal/footprint_pick.png'; // 클릭 시 변경할 PNG 파일
+            } else {
+                pngImage.src = '../../img/journal/footprint.png'; // 다시 클릭하면 원래 이미지로 복귀
+            }
+        });
+
+        postDiv.style.position = 'relative'; // 부모 요소를 relative로 설정
+        postDiv.appendChild(pngImage); // post-container에 이미지 추가
 
         postContainer.appendChild(postDiv); // 게시물 컨테이너에 추가
     });

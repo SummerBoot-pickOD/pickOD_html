@@ -1,0 +1,161 @@
+body{
+    margin: 200px 300px;
+    
+}
+
+.title-container {
+    margin: auto;
+    text-align: center;
+    width: 314px;
+}
+
+.title{
+    border: none;
+    background-color: none;
+    outline: none;
+    font-size: 40px;
+    margin: auto;
+}
+
+.container-display{
+    margin: 50px 0;
+    display: flex;
+}
+.profile-container{
+    width: 324px;
+    height: 342px;
+    border: 1px solid #CCCCCC;
+    border-radius: 20px;
+    margin-right: 32px;
+}
+
+.profile{
+    margin: auto;
+    width: 287px;
+    height: 145px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.user-name-container{
+    padding: 60px 25px 0 50px;
+    height: 103px;
+    width: 80px;
+}
+
+.photo{
+    margin: 25px 0 0 0;
+    width: 103px;
+    height: 103px;
+    background-color: beige;
+}
+
+
+.user-name{
+    font-size: 26px;
+}
+
+.explain-container{
+    width: 324px;
+    text-align: center;
+
+}
+
+.explain{
+    width: 287px;
+    height: 180px;
+    border: none;
+    background-color: none;
+    outline: none;
+    text-align: left;
+
+}
+
+.tag-container{
+    width: 962px;
+    height: 342px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    
+}
+
+.tag-container-schedule{
+    display: flex;
+    
+}
+
+img{
+    padding: 30px;
+    width: 76px;
+    height: 65px;
+}
+
+.schedule-container {
+    margin: 20px;
+}
+
+.schedule {
+    font-size: 15px;
+    color: #A1A1A1;
+    margin: 12px 0 5px;
+}
+
+/* 스타일을 드롭다운처럼 보이게 설정 */
+.date-picker{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    margin-right: 100px; /* 두 날짜 선택기 간격 */
+}
+
+.date-picker input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 0px; /* 오른쪽에 여유 공간을 줌 */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none; /* 기본 화살표 숨기기 */
+}
+
+/* 오른쪽에 화살표 추가 */
+.date-picker::after {
+    content: '\25BC'; /* 유니코드 아래 화살표 */
+    position: absolute;
+    right: 1px;
+    top: 46%;
+    transform: translateY(-50%);
+    pointer-events: none; /* 화살표가 클릭되지 않게 함 */
+    font-size: 20px;
+    color: #888;
+}
+
+.tag-select-container{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    margin-right: 100px; /* 두 날짜 선택기 간격 */
+}
+
+.tag-select{
+    width: 100%;
+    padding: 10px;
+    padding-right: 0px; /* 오른쪽에 여유 공간을 줌 */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none; /* 기본 화살표 숨기기 */
+}
+
+.tag-select::after {
+    content: '\25BC'; /* 유니코드 아래 화살표 */
+    position: absolute;
+    right: 1px;
+    top: 46%;
+    transform: translateY(-50%);
+    pointer-events: none; /* 화살표가 클릭되지 않게 함 */
+    font-size: 20px;
+    color: #888;
+}
