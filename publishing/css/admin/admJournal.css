@@ -95,9 +95,16 @@ td {
   border-left: none;
 }
 
-.title,
+.title {
+  max-width: 180px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0px 5px;
+}
+
 .content {
-  max-width: 250px;
+  max-width: 230px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
