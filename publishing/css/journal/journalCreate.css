@@ -131,3 +131,31 @@ img{
     font-size: 20px;
     color: #888;
 }
+
+.tag-select-container{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    margin-right: 100px; /* 두 날짜 선택기 간격 */
+}
+
+.tag-select{
+    width: 100%;
+    padding: 10px;
+    padding-right: 0px; /* 오른쪽에 여유 공간을 줌 */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none; /* 기본 화살표 숨기기 */
+}
+
+.tag-select::after {
+    content: '\25BC'; /* 유니코드 아래 화살표 */
+    position: absolute;
+    right: 1px;
+    top: 46%;
+    transform: translateY(-50%);
+    pointer-events: none; /* 화살표가 클릭되지 않게 함 */
+    font-size: 20px;
+    color: #888;
+}
