@@ -20,9 +20,9 @@ ul,li{
   list-style: none;
 } 
 
-a{
+/* a{
   text-decoration: none;
-}
+}  */
 
 .nav_wrap{
   display: flex;
