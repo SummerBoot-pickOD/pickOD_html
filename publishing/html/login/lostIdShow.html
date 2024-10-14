@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아이디 찾기</title>
+  <link rel="stylesheet" href="../../css/login/lostIdShow.css">
+  <script defer src="../../js/login/lostIdEmailCert.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id ="header">
+  </div>
+  <main>
+    <div class="container">
+      <div>
+        <img class="back" src="../../img/admin/backArrow.png">
+      </div>
+      <img class="logo" src="../../img/main/logo.png">
+      <h2>해당 이메일로 계정이 있습니다.</h2>
+      <div id="email-container">
+        <div class = "email">
+          <span>gabin1426@gmail.com</span>
+        </div>
+      </div>
+      <div id="button-container">
+        <button type="button" class = "button" id="login">로그인으로 돌아가기</button>
+        <button type="button" class = "button" id="pswd">비밀번호찾기</button>
+      </div>
+  </main>
+  <div id = "footer">
+  </div>
+</body>
+<script>
+    $(function () {
+    $("#header").load("../../html/main/header.html");
+  });
+
+  $(function () {
+    $("#footer").load("../../html/main/footer.html");
+  });
+
+  //있다면 저 방식을 따르면 되고,
+  //만약 없다면?
+  // $("#container>h2").html("해당 이메일로는 계정이 없습니다.");
+  // $(".email>span").html("이메일 계정 없음");
+
+  $("#login").click(function(){
+    window.location.href = "./login.html"
+  })
+  $("#pswd").click(function(){
+    window.location.href = "./lostPswdReset.html"
+  })
+</script>
+</html>
