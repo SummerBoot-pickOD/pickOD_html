@@ -31,12 +31,11 @@ h1 {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-
+  margin-left: 15px;
 }
 
-/* 전체, 제제 걔네 */
 label {
-  margin-right: 10px;
+  margin: 8px;
   justify-content: center;
 }
 
@@ -55,7 +54,7 @@ select {
 }
 
 button {
-  padding: 3px;
+  padding: 3px 5px;
   background-color: #A1A1A1;
   color: white;
   border: none;
@@ -81,9 +80,9 @@ th {
 }
 
 td {
-  border: 1px solid #fbfbfb;
-  border-top: none;
-  border-bottom: none;
+  border: 1px solid #E9E9E9;
+  border-left: none;
+  border-right: none;
   padding: 5px 0px;
   text-align: center;
   border-left: none;
