@@ -1,5 +1,10 @@
 body{
-    margin: 100px 300px;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    margin: 176px 300px;
     
 }
 
@@ -11,7 +16,7 @@ body{
 
 .search-box-container{
     margin-top: 30px;
-    width: 1320px;
+    width: 100%;
     display: flex;
     justify-content: center;
     
@@ -19,7 +24,7 @@ body{
 
 .search-box{
     height: 30px;
-    width: 840px;
+    width: 40%;
     background-color: white;
     border-radius: 20px;
     padding: 10px;
@@ -35,7 +40,7 @@ body{
     color: #797979;
     font-size: 20px;
     line-height: 30px;
-    width: 600px;
+    width: 50%;
     margin: 0 20px;
 }
 
@@ -57,41 +62,56 @@ body{
     cursor : pointer;
 }
 
-.hashteg{
-    margin-top: 30px;
-    width: 1320px;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.hash-container-outline{
+.total_area_wrap{
     display: flex;
-    width: 1275px;
-    height: 320px;
-    background-color: #F6F6F6;
-    justify-content: center;
-    align-items: center;
-    margin:auto;
-
-}
-
-.hash-container-left, .hash-container-center, .hash-container-right{
-    width: 420px;
-    height: 314px;
-    background-color: #EEECEC;
-    margin: 3px 3px;
-}
+    flex-direction: column;
+    margin: 10px 30px 70px 30px;
+  }
+  
+  .total_area_btn{
+    width: 45px;
+    height: 20px;
+    border:0;
+    cursor: pointer; 
+    background:gainsboro;
+    margin-left: 5px;
+    border-radius:5px 5px 0px 0px;
+  
+  }
+  
+  .tag_area{
+    display: flex;
+    background-color: #FEF2F2;
+    padding: 10px;
+    height: 200px;
+    border-radius: 10px;
+    align-items:flex-start;
+  }
+  
+  .tag_area_seoul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    margin-right: 25px;
+   }
+   
+  .tag_area_geonggi{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+  } 
 
 .content-menu{
     display: flex;
-    width: 1320px;
+    width: 100%;
     height: 60px;
     border-bottom: 1px solid #D9D9D9;
 }
 
 .content-total{
-    width: 1000px;
+    width: 75%;
     font-size: 20px;
     margin-left: 15px;
     margin-top: 20px;
@@ -109,7 +129,7 @@ body{
 
 
 .container {
-    width: 1320px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -120,7 +140,7 @@ body{
 }
 
 .post-container {
-    margin: 40px 23px 40px;
+    margin: 50px auto;
     width: 375px;
     height: 405px;
     background-color: #f4f4f4;
