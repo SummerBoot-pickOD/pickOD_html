@@ -169,3 +169,62 @@ img{
     width: 200px; /* select의 너비에 맞춤 */
 }
 
+body {
+    font-family: Arial, sans-serif;
+}
+
+.folder {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #FEF2F2;
+    position: relative;
+}
+
+.tab {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    background-color: #e3e3e3;
+    border-radius: 8px 8px 0 0;
+    position: absolute;
+    top: -30px;
+    left: 10px;
+}
+
+#dayContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.day {
+    padding: 5px 10px;
+    background-color: #7C7C7C; /* 기본 DAY 색상 */
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.day.active {
+    background-color: #FEF2F2; /* 눌린 DAY 색상 */
+    color: black;
+}
+
+#addButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#addButton:hover {
+    background-color: #0056b3;
+}

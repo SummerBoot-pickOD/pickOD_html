@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>너와 나의 여행 일지 작성</title>
+    <link rel="stylesheet" href="../../css/main/header.css">
+    <link rel="stylesheet" href="../../css/main/footer.css">
     <link rel="stylesheet" href="../../css/journal/journalCreate.css">
+    <link rel="stylesheet" href="../../js/journal/journalCreate.js">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -58,6 +61,9 @@
                         <option value="friends">#친구와 함께</option>
                         <option value="lovers">#연인과 함께</option>
                         <option value="family">#가족과 함께</option>
+                        <option value="sunset">#노을</option>
+                        <option value="outdoor">#실외 활동</option>
+                        <option value="indoor">#실내 활동</option>
                     </select>
                     
                     <select class="tag-select" size="">
@@ -66,6 +72,9 @@
                         <option value="friends">#친구와 함께</option>
                         <option value="lovers">#연인과 함께</option>
                         <option value="family">#가족과 함께</option>
+                        <option value="sunset">#노을</option>
+                        <option value="outdoor">#실외 활동</option>
+                        <option value="indoor">#실내 활동</option>
                     </select>
                 </div>
             </div>
@@ -86,7 +95,15 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="folder">
+        <div class="tab">
+            <div id="dayContainer">
+                <span class="day active">DAY 1</span>
+            </div>
+            <button id="addButton">+</button>
+        </div>
+    </div>
+
 
     </div>
 <!-- Flatpickr 라이브러리 -->
