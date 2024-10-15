@@ -47,7 +47,7 @@ input{
 .total_area_wrap{
   display: flex;
   flex-direction: column;
-  margin: 10px 70px 70px 70px;
+  margin: 10px 80px 70px 80px;
 }
 
 .total_area_btn{
@@ -64,7 +64,7 @@ input{
 .tag_area{
   display: flex;
   background-color: #FEF2F2;
-  padding: 15px;
+  padding: 15px 15px 15px 25px;
   height: 200px;
   border-radius: 10px;
   align-items:flex-start;
@@ -77,7 +77,7 @@ input{
   flex-wrap: wrap;
   flex-direction: column;
   height: 100%;
-  margin-right: 25px;
+  margin-right: 40px;
  }
  
 .tag_area_geonggi{
@@ -118,8 +118,8 @@ input{
 }
 
 .festival-img img{
-  width: 240px;
-  height: 170px;
+  width: 280px;
+  height: 195px;
   border-radius: 10px;
 }
 
@@ -129,6 +129,11 @@ input{
 } 
  
 .festival-info{
+  margin-top: 4px;
   display: flex;
   flex-direction: column;
+}
+
+.festival-info a{
+  margin-bottom: 2px;
 }
