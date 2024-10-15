@@ -7,15 +7,15 @@ main {
   margin: 0px 300px;
 }
 
-.replies-mgmt {
-  padding-top: 110px;
+.cmt-mgmt {
+  padding: 110px 0px 5px 0px;
   font-size: 28px;
 }
 
-.replies-of {
+.cmt-of {
   font-size: 20px;
-  padding: 0px 0px 10px 5px;
-  /* background-color: #FAFAFA; */
+  padding: 5px;
+  background-color: #FEF2F2;
 }
 
 .container {
@@ -28,9 +28,10 @@ main {
   background-color: #FAFAFA;
   display: flex;
   align-items: center;
+  margin-top: 4px;
 }
 
-.enter {
+.search-button {
   padding: 4px 20px;
   background-color: #A1A1A1;
   color: white;
@@ -38,7 +39,6 @@ main {
   border-radius: 20px;
   cursor: pointer;
   margin-left: 15px;
-
 }
 
 input[type="text"] {
@@ -48,14 +48,13 @@ input[type="text"] {
   border: solid 1px #e0dfdf;
 }
 
-
 select {
   padding: 5px;
   margin-left: 10px;
   border: solid 1px #e0dfdf;
 }
 
-button {
+.detail-button {
   padding: 3px 5px;
   background-color: #A1A1A1;
   color: white;
@@ -64,41 +63,33 @@ button {
   cursor: pointer;
 }
 
-table {
+.all-comments {
   width: 100%;
   border-collapse: collapse;
   table-layout: auto;
+  margin-bottom: 110px;
 }
 
 .table-head {
   background-color: #FAFAFA;
 }
 
-th {
+.all-comments th {
   padding: 5px 0px;
   text-align: center;
   border-top: 1px solid #E9E9E9;
   border-bottom: 1px solid #E9E9E9;
 }
 
-td {
+.all-comments td {
   border: 1px solid #E9E9E9;
   border-left: none;
   border-right: none;
   padding: 5px 0px;
   text-align: center;
-  border-left: none;
 }
 
-.title {
-  max-width: 180px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding: 0px 5px;
-}
-
-.content {
+.all-comments .content {
   max-width: 230px;
   overflow: hidden;
   white-space: nowrap;
@@ -106,12 +97,90 @@ td {
   padding: 0px 5px;
 }
 
-.last-col {
-  border-right: none;
+/* 항목 column은 2줄로 잘리지 않게 */
+.items {
+  min-width: 130px;
 }
 
-.last-row {
+.all-comments .last-row {
   background-color: #FAFAFA;
   border: none;
   padding: 15px;
+}
+
+/* 여기부터 댓글 상세 모달 */
+/* 모달 위치 조정 어떻게 하지..? */
+.nonmodal-container {
+  display: none;
+  position: relative;
+  width: 50%;
+  margin: 50px auto;
+  border-radius: 10px;
+  border: 1px solid #E9E9E9;
+  padding: 10px 30px;
+}
+
+.nonmodal-content {
+  display: flex;
+  flex-direction: column;
+  /* 이거 없으면 안에 표가 그 컨테이너 만큼 안커짐 */
+  width: 100%;
+  top: 50%;
+}
+
+.close-btn {
+  font-size: 25px;
+  padding-left: 99%;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-size: 20px;
+}
+
+.cmt-detail {
+  width: 100%;
+  margin-top: 2%;
+  border-collapse: collapse;
+}
+
+.cmt-detail th {
+  padding: 5px 0px;
+  border-bottom: 1px solid #E9E9E9;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.cmt-detail td {
+  padding: 5px 10px;
+  border-bottom: 1px solid #E9E9E9;
+  text-align: center;
+}
+
+.cmt-detail .post-title {
+  max-width: none;
+  overflow: visible;
+  white-space: normal;
+  text-overflow: clip;
+  padding: 8px;
+  text-align: left;
+}
+
+.cmt-detail .cmt-content {
+  text-align: left;
+}
+
+.buttons-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.buttons-container button {
+  padding: 5px 10px;
+  margin: 15px;
+  border: none;
+  background-color: #A1A1A1;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
