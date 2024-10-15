@@ -23,15 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    area_btn.forEach(button => {
+  area_btn.forEach(button => {
     button.addEventListener('click', () => {
-      if(button.style.border==='1px solid gray'){
+      const currentColor = button.style.backgroundColor.toLowerCase();
+      if(currentColor === 'rgb(251, 181, 181)' || currentColor === '#fbb5b5'){
         button.style.backgroundColor='';
-        button.style.border='1px  solid #FEF2F2';
-
       }else{
         button.style.backgroundColor = '#FBB5B5';
-        button.style.border = '1px solid gray';
         area_btn_totalseoul.style.fontWeight='' 
       }
     })  
@@ -82,8 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //총 장소 개수
   const itemCount= listItems.length;
-  document.getElementById('itemCount').textContent = '총: ' + itemCount+'건';
-
+  document.getElementById('itemCount').textContent = '총 ' + itemCount+'건';
+  document.getElementById('itemCount').fontWeight='bold';
 
 //조회순 찜하기순 
   const btn1 = document.getElementById('btn1');

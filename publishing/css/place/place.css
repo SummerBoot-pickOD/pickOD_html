@@ -9,6 +9,7 @@ main{
 
 .place{
   border-bottom: 1px solid #D9D9D9;
+  font-size: 28px;
 }
 
 .search{
@@ -130,6 +131,9 @@ input{
 }
 .place-filter button:first-child:before{
   background: none;
+}
+#itemCount{
+  font-weight:bold ;
 }
 
 .place-img{
