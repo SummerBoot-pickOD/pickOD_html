@@ -1,64 +1,67 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 버튼 및 요소들 선택
-    const total_btn = document.querySelector('.total_area_btn');
-    const area_btn = document.querySelectorAll('.tag_area li button');
-    const area_btn_seoul = document.querySelectorAll('.tag_area_seoul button');
-    const area_btn_geonggi = document.querySelectorAll('.tag_area_geonggi button');
-    const area_btn_totalseoul = document.querySelector('.tag_area_totalseoul');
-    const area_btn_totalgeonggi = document.querySelector('.tag_area_totalgeonggi');
+    const total_btn=document.querySelector('.total_area_btn');
+  const area_btn = document.querySelectorAll('.tag_area li button');
+  const area_btn_seoul = document.querySelectorAll('.tag_area_seoul button');
+  const area_btn_geonggi = document.querySelectorAll('.tag_area_geonggi button');
+  const area_btn_totalseoul=document.querySelector('.tag_area_totalseoul');
+  const area_btn_totalgeonggi=document.querySelector('.tag_area_totalgeonggi');
+  
+  total_btn.addEventListener('click',()=>{
+      area_btn.forEach(button=>{
+        button.style.backgroundColor='';
+        button.style.border='1px solid #FEF2F2';
+      })
+      area_btn_totalseoul.style.fontWeight='' 
+      area_btn_totalgeonggi.style.fontWeight='' 
 
-    // 지역 선택 이벤트 처리
-    total_btn.addEventListener('click', () => {
-        area_btn.forEach(button => {
-            button.style.backgroundColor = '';
-            button.style.border = '1px solid #FEF2F2';
-        });
-        area_btn_totalseoul.style.fontWeight = '';
-        area_btn_totalgeonggi.style.fontWeight = '';
-    });
+  });
 
-    area_btn.forEach(button => {
-        button.addEventListener('click', () => {
-            if (button.style.border === '1px solid red') {
-                button.style.backgroundColor = '';
-                button.style.border = '1px solid #FEF2F2';
-            } else {
-                button.style.backgroundColor = '#ffffff';
-                button.style.border = '1px solid red';
-                area_btn_totalseoul.style.fontWeight = '';
-            }
-        });
-    });
+  area_btn.forEach(button => {
+    button.addEventListener('click', () => {
+      if(button.style.border==='1px solid gray'){
+        button.style.backgroundColor='';
+        button.style.border='1px  solid #FEF2F2';
 
-    area_btn_totalseoul.addEventListener('click', () => {
-        area_btn_seoul.forEach(button => {
-            button.addEventListener('click', () => {
-                area_btn_totalseoul.style.fontWeight = '';
-            });
-            button.style.backgroundColor = '';
-            button.style.border = '1px solid #FEF2F2';
-        });
-        if (area_btn_totalseoul.style.fontWeight === 'bold') {
-            area_btn_totalseoul.style.fontWeight = '';
-        } else {
-            area_btn_totalseoul.style.fontWeight = 'bold';
-        }
-    });
+      }else{
+        button.style.backgroundColor = '#FBB5B5';
+        button.style.border = '1px solid gray';
+        area_btn_totalseoul.style.fontWeight='' 
+      
+      }
+    })  
+   });
 
-    area_btn_totalgeonggi.addEventListener('click', () => {
-        area_btn_geonggi.forEach(button => {
-            button.addEventListener('click', () => {
-                area_btn_totalgeonggi.style.fontWeight = '';
-            });
-            button.style.backgroundColor = '';
-            button.style.border = '1px solid #FEF2F2';
-        });
-        if (area_btn_totalgeonggi.style.fontWeight === 'bold') {
-            area_btn_totalgeonggi.style.fontWeight = '';
-        } else {
-            area_btn_totalgeonggi.style.fontWeight = 'bold';
-        }
+  area_btn_totalseoul.addEventListener('click',()=>{
+    area_btn_seoul.forEach(button=>{
+      button.addEventListener('click',()=>{
+        area_btn_totalseoul.style.fontWeight=''; 
+      })
+      button.style.backgroundColor='';
+      button.style.border='1px  solid #FEF2F2';
     });
+    if(area_btn_totalseoul.style.fontWeight==='bold'){
+      area_btn_totalseoul.style.fontWeight='';
+    }else{
+      area_btn_totalseoul.style.fontWeight='bold';
+    }
+    
+
+  });
+
+  area_btn_totalgeonggi.addEventListener('click',()=>{
+    area_btn_geonggi.forEach(button=>{
+      button.addEventListener('click',()=>{
+        area_btn_totalgeonggi.style.fontWeight=''; 
+      })
+          button.style.backgroundColor='';
+          button.style.border='1px solid #FEF2F2';
+    });
+    if(area_btn_totalgeonggi.style.fontWeight==='bold'){
+      area_btn_totalgeonggi.style.fontWeight='';
+    }else{
+      area_btn_totalgeonggi.style.fontWeight='bold';
+    }
+  });
 
     // 게시물 및 페이지네이션 처리
     const posts = Array.from({ length: 50 }, (_, i) => `게시물 ${i + 1}`); // 예시 게시물 생성
@@ -96,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 오른쪽 하단에 png 파일을 추가
             const pngImage = document.createElement('img');
             pngImage.className = 'toggle-image';
-            pngImage.src = '../../img/journal/footprint.png'; // 처음에 표시할 PNG 파일
+            pngImage.src = '../../img/main/unsaved.png'; // 처음에 표시할 PNG 파일
             pngImage.alt = '';
             pngImage.style.position = 'absolute';
             pngImage.style.bottom = '10px';
@@ -106,12 +109,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 클릭 시 다른 이미지로 변경
             pngImage.addEventListener('click', function() {
-                if (pngImage.src.includes('../../img/journal/footprint_pick.png')) {
-                    pngImage.src = '../../img/journal/footprint_pick.png'; // 다시 클릭하면 원래 이미지로 복귀
+                console.log(pngImage.src)
+                console.log(pngImage.src.includes('img/main/saved.png'))
+                if (pngImage.src.includes('img/main/saved.png')) {
+                    pngImage.src = '../../img/main/unsaved.png'; // 다시 클릭하면 원래 이미지로 복귀
                 } else {
-                    pngImage.src = '../../img/journal/footprint_pick.png'; // 클릭 시 변경할 PNG 파일
+                    pngImage.src = '../../img/main/saved.png'; // 클릭 시 변경할 PNG 파일
                 }
             });
+
+        
+
 
             postDiv.style.position = 'relative'; // 부모 요소를 relative로 설정
             postDiv.appendChild(pngImage); // post-container에 이미지 추가
@@ -164,4 +172,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // 초기 표시
     displayPosts();
     setupPagination();
+
+    $(function () {
+        $("#header").load("../main/header.html");
+        });
+    
+        $(function () {
+        $("#footer").load("../main/footer.html");
+        });
 });

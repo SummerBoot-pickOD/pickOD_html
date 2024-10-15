@@ -4,18 +4,17 @@ body{
 }
 
 main{
-    margin: 176px 300px;
+    margin: 110px 300px;
     
 }
 
-.page-name{
-    font-size: 36px;
-    font-weight: bold;
+h2{
+    font-size: 28px;
     border-bottom: 1px solid #D9D9D9;
 }
 
 .search-box-container{
-    margin-top: 30px;
+    margin: 30px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -65,7 +64,7 @@ main{
 .total_area_wrap{
     display: flex;
     flex-direction: column;
-    margin: 10px 30px 70px 30px;
+    margin: 10px 80px 70px 80px;
   }
   
   .total_area_btn{
@@ -82,18 +81,20 @@ main{
   .tag_area{
     display: flex;
     background-color: #FEF2F2;
-    padding: 10px;
+    padding: 15px 15px 15px 25px;
     height: 200px;
     border-radius: 10px;
     align-items:flex-start;
   }
+  
+  
   
   .tag_area_seoul{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     height: 100%;
-    margin-right: 25px;
+    margin-right: 40px;
    }
    
   .tag_area_geonggi{
@@ -101,7 +102,20 @@ main{
     flex-wrap: wrap;
     flex-direction: column;
     height: 100%;
-  } 
+  }  
+  
+  .tag_area button{
+    border: 0;
+    cursor: pointer;
+    background: #FEF2F2;
+    margin: 5px 10px;
+  }
+  
+  .tag_area li button{
+    border: 1px  solid #FEF2F2 ;
+    border-radius: 5px;
+    font-size: 12px;
+  }
 
 .content-menu{
     display: flex;
@@ -125,8 +139,19 @@ main{
     padding-right: 15px;
     margin-left: auto;
     justify-content: left;
+    position: relative;
 }
 
+.wall{
+    margin-top: 7px;
+}
+
+.content-latest, .content-pick, .content-chosen{
+    background: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
 
 .container {
     width: 100%;
@@ -141,9 +166,9 @@ main{
 
 .post-container {
     margin: 50px auto;
-    width: 375px;
+    width: 90%;
     height: 405px;
-    background-color: #f4f4f4;
+    background-color: #FFF9FF;
     display: flex;
     flex-direction: column; /* 세로 방향으로 정렬 */
     align-items: center;
@@ -154,7 +179,7 @@ main{
 }
 
 .post-image {
-    width: 300px;
+    width: 80%;
     height: 300px;
 }
 
