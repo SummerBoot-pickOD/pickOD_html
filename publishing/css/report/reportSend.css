@@ -1,52 +1,65 @@
-h2{
-    text-align: center;
-}
-.modal_btn {
-    display: block;
-    margin: 40px auto;
-    padding: 10px 20px;
-    background-color: royalblue;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    transition: box-shadow 0.2s;
-}
-.modal_btn:hover {
-    box-shadow: 3px 4px 11px 0px #00000040;
-}
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a:link, a:visited{
+    color : black;
+    text-decoration: none;
+  }
 
-/*모달 팝업 영역 스타일링*/
-.modal {
-/*팝업 배경*/
- /*평소에는 보이지 않도록*/
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background: rgba(0,0,0,0.2);
+.modal-container{
+    width:100%;
+    height:100vh;
+    background-color: rgba(0,0,0,0.25);
 }
-.modal .modal_popup {
-/*팝업*/
-    position: absolute;
+#report-modal{
+    width:480px;
+    height:600px;
+    position:absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 20px;
-}
-.modal .modal_popup #close{
-    display: block;
-    padding: 10px 20px;
-    background-color: rgb(116, 0, 0);
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    transition: box-shadow 0.2s;
+    background-color: white;
 }
 
-/* 이거 지금 모달 연구용임 */
+#report-modal-top{
+    padding:28px;
+    background-color: #FBB4B4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:50px;
+    font-size:36px;
+}
+
+#report-modal-mid{
+    width:75%;
+    margin:20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#report-modal-mid>div{
+    margin: 10px 0;
+}
+
+#report-detail{
+    height:150px;
+    resize: none;
+}
+
+#report-modal-tail{
+    margin: 28px auto 0 auto;
+    width:20%;
+}
+
+#report-modal-tail>button{
+  padding : 5px 10px;
+  width:100%;
+  border: 0;
+  background-color: #FBB4B4;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
