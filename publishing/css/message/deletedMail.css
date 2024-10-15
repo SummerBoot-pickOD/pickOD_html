@@ -44,6 +44,18 @@ main{
   font-size: 20px;
 }
 
+.btn-delete-return{
+  display: flex;
+  align-items: center;
+}
+
+.btn-delete-all, .btn-return{
+  border: 1px solid black;
+  margin: 0 10px 0 0;
+  border-radius: 15px;
+  padding: 5px;
+  cursor: pointer;
+}
 .btn-box{
   width: 280px;
   height: 30px;
@@ -91,8 +103,8 @@ main{
   align-items: center;
 }
 
-.mail-open, .mail-from{
-  width: 20%;
+.mail-open, .mail-from, .mail-to{
+  width: 15%;
   display: flex;
   align-items: center;
 }
@@ -135,4 +147,76 @@ main{
   width: 10%;
   display: flex;
   align-items: center;
+}
+
+/*쪽지열기*/
+.nonmodal-container{
+  width: 440px;
+  height: 410px;
+  display: none;
+  border:1px solid black;
+  /* position: absolute; */
+}
+
+.nonmodal-container span{
+  font-size: 20px;
+}
+
+.nonmodal-box{
+  display: flex;
+  flex-direction: column;
+  padding:25px;
+}
+
+.nonmodal-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 27px;
+  margin: 0 0 20px 0;
+}
+
+.btn-close{
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.nonmodal-bottom{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nonmodal-textarea{
+  height: 250px;
+  margin-bottom: 10px;
+  border: 1px solid #D9D9D9;
+  border-radius: 7px;
+  resize: none;
+  width: 100%;
+  /* border:none; */
+}
+
+.nonmodal-textarea:focus{
+  outline: none;
+}
+
+.report-box{
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  padding:5px
+}
+
+.btn-replydelete{
+  display: flex;
+  align-items: center;
+}
+
+.btn-msg-return, .btn-msg-delete {
+  border-radius: 10px;
+  background-color: #D9D9D9;
+  padding: 5px;
+  margin: 5px;
 }
