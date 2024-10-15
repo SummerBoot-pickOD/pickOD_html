@@ -6,6 +6,10 @@ $(function () {
   $("#footer").load("../../html/main/footer.html");
 });
 
+$(".back").click(function(){
+  window.location.href = "../main/main.html";
+});
+
 $("#login-button").click(function(){
   $("#invalid-login").val("");
   let id = $(".id").val();

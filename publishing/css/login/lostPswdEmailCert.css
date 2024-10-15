@@ -51,12 +51,8 @@ h2 {
   color: #6A6A6A;
 }
 
-#input-container{
-  display: flex;
-  justify-content: center;
-}
-
 .input-email,.input-cert{
+  margin:0 auto;
   display: flex;
   align-items: center;
   width:400px;
@@ -67,15 +63,41 @@ h2 {
 .input-email form, .input-cert form{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width:100%;
 }
-.input-email>form>input, .input-cert>form>input{
+.input-email>form>input{
+  height: 27px;
   width:300px;
   border : 0;
 }
-#send-email, #send-cert{
+.input-cert{
+  display:none;
+}
+.input-cert>form>input{
+  height: 27px;
+  width:230px;
+  border : 0;
+}
+.input-cert>form>span{
+  display: block;
+  width:50px;
+  color : red
+}
+
+.send-email, #send-cert{
   padding : 5px 10px;
   border : 1px solid #D6D6D6;
   border-radius: 20px;
   cursor: pointer;
+}
+#left-time{
+  width:80px;
+}
+#invalid-cert{
+  width:400px;
+  margin:0 auto;
+  text-align: left;
+  font-size: 10px;
+  color:red;
 }

@@ -115,10 +115,10 @@ button:hover {
   justify-content: center;
 }
 
-#quick-login-kakao{
+#kakao{
   background-color: #fee404;
 }
 
-#quick-login-google{
+#google{
   border: 1px solid black;
 }

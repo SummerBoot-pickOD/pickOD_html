@@ -7,8 +7,9 @@ $(function () {
 });
 
 $(".back").click(function(){
-  window.location.href = "./lostIdSelectCert.html";
+  window.location.href = "./lostPswdSelectCert.html";
 });
+
 
 $(".send-email").click(function(){
   put = $(".input-email input").val()
@@ -40,8 +41,9 @@ $("#send-cert").click(function(){
       return;
     }
     alert("인증 성공했습니다.");
-    window.location.href = "./lostIdShow.html";
+    window.location.href = "./lostPswdReset.html";
 })
+
 
 
 // (인증번호 확인 및 인증 제한시간 타이머 보여주는 기능 필요)
