@@ -49,9 +49,17 @@
             <div class="tag-container-schedule">
                 <img src="../../img/journal/footprint_pink.png" alt="">
                 <div class="tag-select-container">
-                    <div class="schedule">
+                    <div class="schedule-tag">
                         태그
                     </div>
+                    <select class="tag-select" size="">
+                        <option disabled hidden selected>선택하세요.</option>
+                        <option value="alone">#혼자서</option>
+                        <option value="friends">#친구와 함께</option>
+                        <option value="lovers">#연인과 함께</option>
+                        <option value="family">#가족과 함께</option>
+                    </select>
+                    
                     <select class="tag-select" size="">
                         <option disabled hidden selected>선택하세요.</option>
                         <option value="alone">#혼자서</option>
@@ -63,37 +71,40 @@
             </div>
             <div class="tag-container-schedule">
                 <img src="../../img/journal/footprint_pink.png" alt="">
-                <div class="schedule-container">
-                    <div class="schedule">
+                <div class="thema-container">
+                    <div class="schedule-thema">
                         테마
                     </div>
-                    <div class="date-picker">
-                        <label for="start-date"></label>
-                        <input type="text" id="start-date" placeholder="시작일">
-                    </div>
-                    <div class="date-picker">
-                        <label for="end-date"></label>
-                        <input type="text" id="end-date" placeholder="종료일">
-                    </div>
+                    <select class="thema-select" size="">
+                        <option disabled hidden selected>선택하세요.</option>
+                        <option value="healing">#힐링</option>
+                        <option value="blackWhite">#흑백요리사</option>
+                        <option value="delicious">#맛집 탐방</option>
+                        <option value="hotel">#호캉스</option>
+                    </select>
                 </div>
             </div>
         </div>
     </div>
+    <div>
+
+    </div>
 <!-- Flatpickr 라이브러리 -->
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
-    // Flatpickr 달력 초기화
+    // Flatpickr 달력 초기화 (시작일)
     flatpickr("#start-date", {
         dateFormat: "Y-m-d", // 날짜 형식 (예: 2024-10-13)
-        locale: "ko" // 한국어 로케일
+        locale: "ko",        // 한국어 로케일
+        position: "auto"     // 달력의 위치를 자동으로 조정
     });
-</script>
+    
 
-<script>
-    // Flatpickr 달력 초기화
+    // Flatpickr 달력 초기화 (종료일)
     flatpickr("#end-date", {
         dateFormat: "Y-m-d", // 날짜 형식 (예: 2024-10-13)
-        locale: "ko" // 한국어 로케일
+        locale: "ko",        // 한국어 로케일
+        position: "left"    // 달력을 아래쪽에 고정
     });
     
 </script>
