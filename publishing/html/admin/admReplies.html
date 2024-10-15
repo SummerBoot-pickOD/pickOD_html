@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Replies Management</title>
+  <link rel="stylesheet" href="../../css/admin/admReplies.css">
+  <link rel="stylesheet" href="../../css/main/header.css">
+  <link rel="stylesheet" href="../../css/main/footer.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="../../js/admin/admReplies.js"></script>
+</head>
+
+<body>
+  <div id="header"></div>
+  <main>
+    <div class="replies">
+      <h1 class="replies-mgmt">댓글 관리</h1>
+      <div class="container">
+        <!-- js로 맞는 데이터 불러오기 -->
+        <h2 class="replies-of">[여행 발자국 > 2박 3일 힐링 대부도 나들이]</h2>
+        <div class="search">
+          <select id="condition">
+            <option value="" disabled selected>조건을 선택하세요</option>
+            <option value="name">성명</option>
+            <option value="nick">닉네임</option>
+            <option value="report">신고 여부</option>
+          </select>
+          <input type="text" placeholder="검색어를 입력하세요." />
+          <button type="button" class="enter">검색</button>
+        </div>
+
+        <table>
+          <tr class="table-head">
+            <th>아이디</th>
+            <th>성명</th>
+            <th>닉네임</th>
+            <th>댓글 내용</th>
+            <th>신고 여부</th>
+            <th>상세보기</th>
+          </tr>
+
+          <!-- 내용은 js로 불러올것. 일단 어떻게 뜰지 예시 -->
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="content">오 엄청난 여행인걸요. 저도 꼭 따라해봐야겠어요. 앞으로도 즐거운 여행 하세요.</td>
+            <td>N</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="content">오 엄청난 여행인걸요. 저도 꼭 따라해봐야겠어요. 앞으로도 즐거운 여행 하세요.</td>
+            <td>N</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="content">오 엄청난 여행인걸요. 저도 꼭 따라해봐야겠어요. 앞으로도 즐거운 여행 하세요.</td>
+            <td>N</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="content">오 엄청난 여행인걸요. 저도 꼭 따라해봐야겠어요. 앞으로도 즐거운 여행 하세요.</td>
+            <td>N</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="content">오 엄청난 여행인걸요. 저도 꼭 따라해봐야겠어요. 앞으로도 즐거운 여행 하세요.</td>
+            <td>N</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="content">오 엄청난 여행인걸요. 저도 꼭 따라해봐야겠어요. 앞으로도 즐거운 여행 하세요.</td>
+            <td>N</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="content">오 엄청난 여행인걸요. 저도 꼭 따라해봐야겠어요. 앞으로도 즐거운 여행 하세요.</td>
+            <td>N</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="content">오 엄청난 여행인걸요. 저도 꼭 따라해봐야겠어요. 앞으로도 즐거운 여행 하세요.</td>
+            <td>N</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="content">오 엄청난 여행인걸요. 저도 꼭 따라해봐야겠어요. 앞으로도 즐거운 여행 하세요.</td>
+            <td>N</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td>pickpickkim@gmail.com</td>
+            <td>김픽미</td>
+            <td>pickme1234</td>
+            <td class="content">오 엄청난 여행인걸요. 저도 꼭 따라해봐야겠어요. 앞으로도 즐거운 여행 하세요.</td>
+            <td>N</td>
+            <td class="last-col"><button type="button">상세보기</button></td>
+          </tr>
+          <tr>
+            <td colspan="6" class="last-row"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </main>
+  <div id="footer"></div>
+</body>
+
+</html>
