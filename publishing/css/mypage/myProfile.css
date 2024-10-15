@@ -71,13 +71,48 @@ main{
   margin: 10px;
 }
 
+.basic-img-title{
+  font-size: 26px;
+  margin: 40px 0 0 20px;
+  border-bottom: 1px solid black;
+}
+
 /* 이미지박스부분 */
+
+.basic-img-title{
+  margin: 40px 0 20px 0;
+}
+
+.basic-img-box{
+  overflow-y : scroll;
+  max-height: 900px;
+}
 
 .basic-img-containerbox img{
   width: 300px;
   height: 300px;
 }
-.img-upper{
+
+.basic-img-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap:10px
+}
+
+.basic-img-box>div:nth-child(1){
+  grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+
+.basic-img-box>div:nth-child(1)>img{
+  width: 600px;
+  height: 600px;
+  border-radius: 20px;
+}
+/* .img-upper{
   display: flex;
   max-width: 1320px;
   height: 100%;
@@ -102,6 +137,7 @@ main{
 
 .img-under{
   max-width: 1320px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
-}
+} */

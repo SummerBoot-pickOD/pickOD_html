@@ -302,12 +302,14 @@ main{
   display: flex;
   align-items: center;
   height: 100px;
+  width: 100%;
 }
 
 .checklist-check{
   width: 20%;
-  height: 80px;
   display: flex;
+  float: right;
+  height: 80px;
   align-items: center;
   justify-content: center;
 }
@@ -433,6 +435,7 @@ main{
 
 .myplan-period{
   border-radius: 5px;
+  padding: 5px;
   width: 25%;
   background-color: #567FF2;
   color: white;

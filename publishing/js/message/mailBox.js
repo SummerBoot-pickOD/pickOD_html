@@ -45,7 +45,7 @@ btnDelete.addEventListener('click', function() {
   
   // 받은 쪽지 중 체크된 항목을 찾아서 휴지통으로 이동
   const checkboxes = document.querySelectorAll('.item');
-  // console.log(checkboxes);
+  console.log(checkboxes);
   checkboxes.forEach((checkbox, index) => {
       if (checkbox.checked) {
           // const messageItem = checkbox.parentElement;
@@ -53,6 +53,7 @@ btnDelete.addEventListener('click', function() {
           // const msgDelList= messageItem.parentElement;
           // console.log(msgDelList);
           const messageItem = checkbox.closest('.mailbox-list');
+          console.log(messageItem);
           mailboxList.forEach(list => {
             list.removeChild(messageItem);
           }); // 받은 쪽지함에서 삭제
