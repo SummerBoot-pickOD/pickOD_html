@@ -7,9 +7,15 @@ main {
   margin: 0px 300px;
 }
 
-.places-mgmt {
+.replies-mgmt {
   padding-top: 110px;
   font-size: 28px;
+}
+
+.replies-of {
+  font-size: 20px;
+  padding: 0px 0px 10px 5px;
+  /* background-color: #FAFAFA; */
 }
 
 .container {
@@ -32,11 +38,7 @@ main {
   border-radius: 20px;
   cursor: pointer;
   margin-left: 15px;
-}
 
-label {
-  margin: 8px;
-  justify-content: center;
 }
 
 input[type="text"] {
@@ -88,7 +90,14 @@ td {
   border-left: none;
 }
 
-.title,
+.title {
+  max-width: 180px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0px 5px;
+}
+
 .content {
   max-width: 230px;
   overflow: hidden;
