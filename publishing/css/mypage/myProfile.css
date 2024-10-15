@@ -1,3 +1,5 @@
+
+
 /*공간지정*/
 *{
   margin: 0;
@@ -27,3 +29,79 @@ main{
   font-weight: bold;
 }
 
+.profile-containerbox{
+  display: flex;
+  align-items: center;
+}
+
+.profile-picturebox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 233px;
+  height: 233px;
+  background-color: #F0F0F0;
+  border-radius: 30px;
+}
+
+.picture-uploadbox{
+  height: 230px;
+  width: 555px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  border: 1px solid #F0F0F0;
+}
+
+.upload-local, .upload-basic, .delete-img{
+  display: flex;
+  align-items: center;
+}
+
+.picture-uploadbox img{
+  width: 40px;
+  height: 40px;
+}
+
+.picture-uploadbox div{
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  margin: 10px;
+}
+
+/* 이미지박스부분 */
+
+.basic-img-containerbox img{
+  width: 300px;
+  height: 300px;
+}
+.img-upper{
+  display: flex;
+  max-width: 1320px;
+  height: 100%;
+}
+
+.main-img{
+  padding: 10px;
+}
+
+.main-img img{
+  width: 600px;
+  height: 600px;
+  gap:20px
+}
+
+.sub-img{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.img-under{
+  max-width: 1320px;
+  display: flex;
+  gap: 10px;
+}

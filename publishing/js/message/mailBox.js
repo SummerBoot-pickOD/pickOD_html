@@ -1,12 +1,11 @@
 //헤더푸터
 $(function () {
-$("#header").load("../main/header.html");
-});
-
-$(function () {
-$("#footer").load("../main/footer.html");
-});
-
+  $("#header").load("../main/header.html");
+  });
+  
+  $(function () {
+  $("#footer").load("../main/footer.html");
+  });
 // 전체클릭 기능
 let checkAll = document.querySelector('.all');
 let checkItem = document.querySelectorAll('.item');
