@@ -18,14 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   area_btn.forEach(button => {
     button.addEventListener('click', () => {
-      if(button.style.border==='1px solid red'){
+      if(button.style.border==='1px solid gray'){
         button.style.backgroundColor='';
         button.style.border='1px  solid #FEF2F2';
 
       }else{
-        button.style.backgroundColor = '#ffffff';
-        button.style.border = '1px solid red';
+        button.style.backgroundColor = '#FBB5B5';
+        button.style.border = '1px solid gray';
         area_btn_totalseoul.style.fontWeight='' 
+      
       }
     })  
    });
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         area_btn_totalgeonggi.style.fontWeight=''; 
       })
           button.style.backgroundColor='';
-          button.style.border='1px  solid #FEF2F2';
+          button.style.border='1px solid #FEF2F2';
     });
     if(area_btn_totalgeonggi.style.fontWeight==='bold'){
       area_btn_totalgeonggi.style.fontWeight='';
@@ -62,5 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  $(function () {
+    $("#header").load("../main/header.html");
+  });
+  
+  $(function () {
+    $("#footer").load("../main/footer.html");
+  });
 });
   
