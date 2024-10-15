@@ -129,9 +129,9 @@ input{
 } 
  
 .festival-info{
-  margin-top: 4px;
   display: flex;
   flex-direction: column;
+  margin-top: 4px;
 }
 
 .festival-info a{
