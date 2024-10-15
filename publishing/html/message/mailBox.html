@@ -8,21 +8,9 @@
   crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../../css/message/mailBox.css">
   <script defer src="../../js/message/mailBox.js"></script>
-  <!-- <style>
-    .message-list {
-        list-style-type: none;
-        padding: 0;
-    }
-    .message-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-    .trash-button {
-        margin-left: 10px;
-        cursor: pointer;
-    }
-  </style> -->
+  <link rel="stylesheet" href="../../css/main/header.css">
+  <link rel="stylesheet" href="../../css/main/footer.css">
+
 </head>
 <body>
   <form action="#" method="">
@@ -65,84 +53,84 @@
       </section>
 
       <section>
-        <div class="mailbox-list">
-          <div class="check-item">
-            <input type="checkbox" name="item" class="item">
+        <div class="mailbox-container">
+          <div class="mailbox-list">
+            <div class="check-item">
+              <input type="checkbox" name="item" class="item">
+            </div>
+            <div class="mail-open" name=""><img src="../../img/message/받은편지.png" alt=""></div>
+            <div class="mail-from" name="">신현식</div>
+            <div class="mail-content" name="">어쩌구저쩌구</div>
+            <div class="mail-date" name="">2024-10-04</div>
           </div>
-          <div class="mail-open" name=""><img src="../../img/message/받은편지.png" alt=""></div>
-          <div class="mail-from" name="">신현식</div>
-          <div class="mail-content" name="">어쩌구저쩌구</div>
-          <div class="mail-date" name="">2024-10-04</div>
         </div>
-        <div class="mailbox-list">
-          <div class="check-item">
-            <input type="checkbox" name="item" class="item">
+       
+        <div class="mailbox-container">
+          <div class="mailbox-list">
+            <div class="check-item">
+              <input type="checkbox" name="item" class="item">
+            </div>
+            <div class="mail-open" name=""><img src="../../img/message/받은편지.png" alt=""></div>
+            <div class="mail-from" name="">신현식</div>
+            <div class="mail-content" name="">어쩌구저쩌구</div>
+            <div class="mail-date" name="">2024-10-04</div>
           </div>
-          <div class="mail-open" name=""><img src="../../img/message/쪽지함.png" alt=""></div>
-          <div class="mail-from" name="">신현식</div>
-          <div class="mail-content" name="">어쩌구저쩌구</div>
-          <div class="mail-date" name="">2024-10-04</div>
         </div>
       </section>
       <section>
-        <div class="nonmodal-container">
-          <div class="nonmodal-box">
-            <div class="nonmodal-top">
-              <div class="detail-from">
-                <span>From.</span>
-                <span>신현식</span>
+        <form action="#" method="get">
+          <div class="nonmodal-container getmsg-container">
+            <div class="nonmodal-box">
+              <div class="nonmodal-top">
+                <div class="detail-from">
+                  <span>From.</span>
+                  <span>신현식</span>
+                </div>
+                <div class="btn-close">&times;</div>
               </div>
-              <div class="btn-close">&times;</div>
-            </div>
-            <div class="nonmodal-textarea">
-              <textarea id="textarea" placeholder="쪽지를입력하세요"></textarea>
-            </div>
-            <div class="nonmodal-bottom">
-              <div class="report-box"><img src="../../img/message/report.png" alt="신고하기"></div>
-              <div class="btn-replydelete">
-                <div>삭제</div>
-                <div>답장</div>
+              <div class="nonmodal-textarea">
+                어쩌구저쩌구
+              </div>
+              <div class="nonmodal-bottom">
+                <div class="report-box"><img src="../../img/message/report.png" alt="신고하기"></div>
+                <div class="btn-replydelete">
+                  <div class="delete-msg">삭제</div>
+                  <div class="reply-msg">답장</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </form>
       </section>
- 
+      <section>
+        <form action="#" method="get">
+          <div class="nonmodal-container sendmsg-container">
+            <div class="nonmodal-box">
+              <div class="nonmodal-top">
+                <div class="detail-to">
+                  <span>To.</span>
+                  <span>신현식</span>
+                </div>
+                <div class="btn-close">&times;</div>
+              </div>
+              <div class="nonmodal-textarea">
+                <textarea id="textarea" placeholder="쪽지를입력하세요"></textarea>
+              </div>
+              <div class="nonmodal-bottom">
+                <div class="report-box"><img src="../../img/message/report.png" alt="신고하기"></div>
+                <div class="btn-send">
+                  <div class="send-msg">보내기</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
 
-      <!-- <section>
-        <!-- 휴지통이동 참고 자료 -->
-        <!-- <h1>받은 쪽지함</h1>
-          <ul class="message-list" id="messageList">
-              <li class="message-item">
-                  <input type="checkbox" class="message-checkbox">
-                  <span>쪽지 1: 안녕하세요!</span>
-              </li>
-              <li class="message-item">
-                  <input type="checkbox" class="message-checkbox">
-                  <span>쪽지 2: 회의 일정 변경되었습니다.</span>
-              </li>
-              <li class="message-item">
-                  <input type="checkbox" class="message-checkbox">
-                  <span>쪽지 3: 점심 같이 드실래요?</span>
-              </li>
-          </ul>
-      <button id="deleteButton">휴지통으로 이동</button>
-    <h2>휴지통</h2>
-    <ul class="message-list" id="trashList"></ul>
-      </section> -->
     </main>
     <footer>
       <div id='footer'></div>
     </footer>
   </form>
 </body>
-<script>
-  $(function () {
-  $("#header").load("../main/header.html");
-  });
-
-  $(function () {
-  $("#footer").load("../main/footer.html");
-  });
-</script>
 </html>
