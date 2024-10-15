@@ -13,8 +13,9 @@
     <script src="https://kit.fontawesome.com/abd96c8f9a.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="header"></div>
     <main>
-        <div class="page-name">너와 나의 여행 발자국</div>
+        <h2>너와 나의 여행 발자국</h2>
         <div class="search-box-container">
             <form class="search-box" action="" method="get">
                 <input class="search-text" type="text" name="" placeholder="검색어를 입력하세요." onfocus="this.placeholder=''" onblur="this.placeholder='검색어를 입력하세요.'">
@@ -26,8 +27,8 @@
         <div class="total_area_wrap">
             <button class="total_area_btn" type="button">전체</button>
             <div class="tag_area">
-            <button class="tag_area_totalseoul" type="button">서울</button>
-            <ul class="tag_area_seoul">
+              <button class="tag_area_totalseoul" type="button">서울</button>
+              <ul class="tag_area_seoul">
                 <li><button type="button">강남구</button></li>
                 <li><button type="button">도봉구</button></li>
                 <li><button type="button">동대문구</button></li>
@@ -53,10 +54,10 @@
                 <li><button type="button">구로구</button></li>
                 <li><button type="button">금천구</button></li>
                 <li><button type="button">노원구</button></li>
-            </ul>
-        
-            <button class="tag_area_totalgeonggi" type="button">경기</button>
-            <ul class="tag_area_geonggi">
+              </ul>
+          
+              <button class="tag_area_totalgeonggi" type="button">경기</button>
+              <ul class="tag_area_geonggi">
                 <li><button type="button">가평시</button></li>
                 <li><button type="button">동두천시</button></li>
                 <li><button type="button">부천시</button></li>
@@ -89,16 +90,18 @@
                 <li><button type="button">김포시</button></li>
                 <li><button type="button">남양주시</button></li>
                 
-            </ul>
-        </div>
+              </ul>
+            </div>
+      
+          </div>
         <div>
             <div class="content-menu">
                 <div class="content-total">총 <span id="total-posts">0</span>개</div>
-                <div class="content-latest">최신순</div>
+                <button class="content-latest">최신순</button>
                 <div class="wall">|</div>
-                <div class="content-pick">찜하기순</div>
+                <button class="content-pick">찜하기순</button>
                 <div class="wall">|</div>
-                <div class="content-chosen">선정 발자국</div>
+                <button class="content-chosen">선정 발자국</button>
             </div>
 
             <div>
@@ -113,15 +116,5 @@
 
     </main>
     <div id="footer"></div>
-    <div id="header"></div>
 </body>
-<script>
-    $(function () {
-    $("#header").load("../main/header.html");
-    });
-
-    $(function () {
-    $("#footer").load("../main/footer.html");
-    });
-</script>
 </html>
