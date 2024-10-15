@@ -18,18 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   area_btn.forEach(button => {
     button.addEventListener('click', () => {
-      if(button.style.border==='1px solid gray'){
-        button.style.backgroundColor='';
-        button.style.border='1px  solid #FEF2F2';
+      const currentColor = button.style.backgroundColor.toLowerCase();
+      if(currentColor === 'rgb(251, 181, 181)' || currentColor === '#fbb5b5'){
+        button.style.backgroundColor='#fef2f2';
 
       }else{
         button.style.backgroundColor = '#FBB5B5';
-        button.style.border = '1px solid gray';
         area_btn_totalseoul.style.fontWeight='' 
-      
       }
     })  
-   });
+  });
 
   area_btn_totalseoul.addEventListener('click',()=>{
     area_btn_seoul.forEach(button=>{
