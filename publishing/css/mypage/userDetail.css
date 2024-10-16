@@ -90,10 +90,10 @@ h2 {
   width : 400px;
 }
 
-/* #invalid-pswd{
+#invalid-pswd{
   width: 100%;
   height: 10px;
-} */
+}
 
 .text-input button{
   padding : 5px 10px;
