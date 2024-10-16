@@ -25,6 +25,8 @@ main>*{
   width:1000px;
   overflow-y: scroll;
   border: 1px solid black;
+  resize:none;
+  font-weight: bold;
 }
 .agree-box{
   display: flex;
