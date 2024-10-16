@@ -6,18 +6,19 @@ $(function () {
   $("#footer").load("../../html/main/footer.html");
 });
 
-
-$(".last-col").click(function(){
+$(".last-col"+i).click(function(){
   if($(".modal-container").css('display') == 'flex'){
     if($("#report-detail-msg").css('display') == 'block'){
       $("#report-detail-msg").css('display','none');
     }
+    $("#report-detail-modal").css('display','none');
     $(".modal-container").css('display','none');
   }
 
   //데이터 받아와서 내용 넣고
   setTimeout(() => {
     $(".modal-container").css('display','flex');
+    $("#report-detail-modal").css('display','block');
   }, 200);
   return;
 });
@@ -36,6 +37,9 @@ $("#search-sanction").click(function(){
 })
 
 $("#update-sanction").click(function(){
+  if(confirm("정말 제재를 부과하겠습니까?") == false){
+    return;
+  }
   //제재 부과
   if($("#s-count").text() == ''){
     alert("해당 사용자의 제재 횟수를 먼저 검색해 주십시오");
