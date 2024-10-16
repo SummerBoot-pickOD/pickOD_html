@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의계획짜기</title>
+  <link rel="stylesheet" href="../../css/planner/myPlan.css">
+  <script defer src="../../js/planner/myPlan.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../css/main/header.css">
+  <link rel="stylesheet" href="../../css/main/footer.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <div class="name-box">
+      나의여행짜기
+    </div>
+    <div class="myplan-title">
+      <input type="text" id="myplan-title" placeholder="여행제목을 입력해주세요">
+    </div>
+    <div class="check-date">
+      <button id="openModalBtn">일정을 선택해주세요</button>
+    </div>
+    <!-- 기간 선택 모달 display:none상태 -->
+    <div id="dateRangeModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModalBtn">&times;</span>
+        <h3>출발일과 도착일을 선택하세요</h3>
+        <label for="startDate">출발일:</label>
+        <input type="date" id="startDate"><br><br>
+        <label for="endDate">도착일:</label>
+        <input type="date" id="endDate">
+        <br><br>
+        <button id="saveDateBtn">저장</button>
+      </div>
+    </div>
+    <!-- 선택한 기간 표시 -->
+    <div id="displayDateRange">
+      <div>없음</div>
+    </div>
+   
+<!-- 세부플랜짜기 -->
+    <div dayplan-container>
+      <div class="day-box"><span class="daynum">day1</span>5/16일<span class="datenum"></span></div>
+      <div class="day-spot">
+        <div class="order-num">1</div>
+        <div class="order-spot">경복궁</div>
+      </div>
+      <div class="btn-area">
+        <button type="submit">장소추가</button>
+        <button type="submit">메모추가</button>
+      </div>
+    </div>
+
+     <div class="memo-container">
+      <div class="memo-box">
+        <div class="memo-top">
+          <div class="memo-name">
+            <span>메모</span>
+          </div>
+          <div class="btn-close">&times;</div>
+        </div>
+        <div class="memo-textarea">
+          <textarea id="textarea" placeholder="메모를입력하세요"></textarea>
+        </div>
+        <div class="memo-bottom">
+          <div class="btn-save">
+            <div class="save">확인</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="">
+
+    </div>
+
+
+  </main>
+  <div id="footer"></div>
+</body>
+</html>
