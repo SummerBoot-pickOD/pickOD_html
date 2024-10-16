@@ -3,9 +3,15 @@
   padding: 0;
 }
 
-main{
-  margin: 110px 300px;
+main {
+  margin: 110px auto 0;
+  padding: 0 20px;
+  max-width: 1320px; /* 페이지의 최대 너비를 설정 */
+  width: 100%;
+  height: auto;
+
 }
+
 
 /* 모달 스타일 */
 .modal {
@@ -50,47 +56,112 @@ main{
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 50px;
+  /* width: 400px; */
+  margin-bottom: 20px;
+}
+
+#myplan-title{
+  border: none;
+  font-size: 40px;
 }
 .check-date{
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+ 
 }
 
 #displayDateRange{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
+  color: #AD9E9E;
 }
 
 .dayplan-container{
-  width: 1320px;
-  height: 350px;
+  max-width: 1320px;
+  height: auto;
   display: flex;
   flex-direction: column;
+  border-radius: 50px;
+  margin: 40px 0;
 }
 
 .day-box{
   width: 100%;
   height: 100px;
-  background-color: yellow;
+}
+
+.daynum{
+  padding: 20px;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.datenum{
+  font-size: 30px;
+}
+
+.dayspot-Container{
+  height: auto;
 }
 
 .day-spot{
   display: flex;
-  height: 115px;
+  height: 80px;
+  font-size: 40px;
+  padding: 40px;
+  align-items: center;
 }
 
 .order-num{
   width: 10%;
-  height: 100px;
-  background-color: green;
+  height: 80px;
+  background-color: #9E72E4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  color: white;
+
 }
 
 .order-spot{
-  width: 90%;
-  height: 100px;
-  background-color: beige;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  margin: 0 100px;
+  border: 1px solid #E29A9A;
+  border-radius: 15px;
+  padding: 0px; 
+  
+}
+
+
+.memo-area{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  height: 80px;
+
+
+  /* margin-left: calc(100px); /* .order-spot과 동일한 margin-left 적용 */
+  /* display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 20px;
+  height: 80px;
+  width: 50%;
+  border: 1px solid #E29A9A;
+  border-radius: 15px; */ 
+  
 }
 
 .btn-area{
@@ -98,8 +169,125 @@ main{
   justify-content: space-around;
 }
 
+.btn-area button{
+  display: flex;
+  justify-content: space-around;
+  border: none;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #6A6363;
+  cursor: pointer;
+}
+/* 장소추가모달 */
+.addspot-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.addspot-container-content {
+  background-color: white;
+  padding: 30px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.addspot-container-content h2 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #f2c2c2;
+  padding: 5px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.search-container input[type="text"] {
+  border: none;
+  outline: none;
+  padding: 10px;
+  flex-grow: 1;
+  font-size: 16px;
+  border-radius: 30px;
+  color: #000;
+}
+
+.search-container input::placeholder {
+  color: #ccc;
+}
+
+.search-container button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+.search-container button img {
+  width: 24px;
+  height: 24px;
+}
+
+.saved-places {
+  margin-top: 20px;
+}
+
+.saved-places h3 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.place-list {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.place-list ul {
+  list-style: none;
+}
+
+.place-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.place-list li button {
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
 
 
+/* 메모추가모달 */
 .memo-container {
   position: fixed;  /* 화면에 고정 */
   top: 50%;  /* 화면 상단에서 50% */
@@ -112,7 +300,7 @@ main{
   border: 1px solid black;  /* 테두리 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* 그림자 효과 */
   padding: 25px;
-  display: block;  /* 기본적으로는 숨김 */
+  display: none;  /* 기본적으로는 숨김 */
   border-radius: 10px;  /* 모서리를 둥글게 */
 }
 
@@ -124,7 +312,7 @@ main{
 .memo-box{
   display: flex;
   flex-direction: column;
-  padding:25px;
+  padding: 25px;
 }
 
 .memo-top{
@@ -153,7 +341,7 @@ main{
   border: 1px solid #D9D9D9;
   border-radius: 7px;
   resize: none;
-  width: 100%;
+  width: 400px;
   /* border:none; */
 }
 
@@ -162,6 +350,7 @@ main{
   height: 91%;
   resize:none;
   border:none;
+  padding: 10px;
   width: 94%
 }
 
@@ -179,5 +368,62 @@ main{
   background-color: #D9D9D9;
   padding: 5px;
   margin: 5px;
+  cursor: pointer;
+}
+
+.template-container{
+  min-height: 700px;
+}
+.container-title{
+  border-bottom: 2px solid black;
+  margin: 20px;
+  padding: 10px;
+}
+
+.template-box{
+  background-color: #FEF2F2;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.template-box h3{
+  font-size: 30px;
+}
+
+.template-list{
+  height: auto;
+}
+
+.template-list li{
+  display: flex;
+  margin: 40px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+.template-list button{
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #a89292;
+    cursor: pointer;
+}
+
+.button-group{
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  justify-content: flex-end;
+  
+}
+
+.cancel-btn, .save-btn{
+  font-size: 28px;
+  background-color: #845AC6;
+  color: white;
+  padding: 10px;
+  margin: 0 20px;
+  border: none;
   cursor: pointer;
 }

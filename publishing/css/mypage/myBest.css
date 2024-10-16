@@ -4,10 +4,33 @@
   padding: 0;
 }
  
-main{
-  margin: 150px 300px 0px 300px;
+/* main{
+  margin: 110px 300px 0px 300px;
+} */
+
+main {
+  margin: 110px auto 0;
+  padding: 0 20px;
+  max-width: 1320px; /* 페이지의 최대 너비를 설정 */
+  width: 100%;
 }
 
+/* @media (max-width: 768px) {
+  main {
+    margin: 50px auto;
+    padding: 0 10px;
+  }
+} */
+
+.mybest-container {
+  width: 100%;
+  max-width: 1320px;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  place-items: center;
+}
 
 .mybest-title{
   font-size: 36px;
@@ -23,18 +46,13 @@ main{
   border-bottom: 2px solid #D9D9D9;
 }
 
-.title-mybest{
-  font-weight: bold;
+.name-box a{
+  text-decoration: none;
+  color:black;
 }
 
-.mybest-container{
-  width: 1320px;
-  height: 1500px;
-  display: grid;
-  /* display: none; */
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  place-items: center;
+.title-mybest{
+  font-weight: bold;
 }
 
 .mybest-list{
@@ -59,6 +77,12 @@ main{
   align-items: center;
 }
 
+/* .mybest-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+} */
+
 .mybest-box{
   display: flex;
   align-items: center;
@@ -67,10 +91,12 @@ main{
 
 .mybest-content{
   height: 80px;
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  font-family:'Dancing Script', cursive;
+  font-weight: bold;
 }
 
 .mybest-name{
