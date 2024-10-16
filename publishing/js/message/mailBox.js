@@ -32,7 +32,6 @@ checkItem.forEach(function(e) {
 });
 
 //휴지통 이동
-// 왜...하나만제거가 되는거냐.....
 const btnDelete = document.querySelector('.btn-delete');
 console.log(btnDelete);
 const mailboxList = document.querySelectorAll('.mailbox-container');
