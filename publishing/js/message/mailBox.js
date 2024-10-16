@@ -7,6 +7,14 @@ $(function () {
   $("#footer").load("../main/footer.html");
   });
 
+document.addEventListener('DOMContentLoaded', function() {
+  // 페이지네이션 설정 전에 currentPage를 1로 설정
+  currentPage = 1;
+  
+  setupPagination(); // 페이지네이션 버튼 생성
+  displayMails(); // 초기 메일 목록 10개만 표시
+});
+
 // 전체클릭 기능
 let checkAll = document.querySelector('.all');
 let checkItem = document.querySelectorAll('.item');
@@ -134,15 +142,15 @@ let currentPage = 1;
 let totalPages;
 
 function displayMails() {
-  const postContainer = document.getElementById('mails');
-  postContainer.innerHTML = ''; // 현재 표시된 항목 초기화
+  const mailContainer = document.getElementById('mails');
+  mailContainer.innerHTML = ''; // 현재 표시된 항목 초기화
 
   const startIndex = (currentPage - 1) * MailsPerPage;
   const endIndex = Math.min(startIndex + MailsPerPage, mailboxLists.length); // 실제 항목 수와 비교하여 인덱스 계산
 
   // 해당 페이지에 맞는 mailbox-list만 표시
   for (let i = startIndex; i < endIndex; i++) {
-    postContainer.appendChild(mailboxLists[i]);
+    mailContainer.appendChild(mailboxLists[i]);
   }
 }
 
@@ -185,10 +193,11 @@ function setupPagination() {
 };
 
 
-  document.addEventListener('DOMContentLoaded', function() {
-    setupPagination();
-    displayMails();
-  });
+
+  // document.addEventListener('DOMContentLoaded', function() {
+  //   setupPagination();
+  //   displayMails();
+  // });
 
 
 

@@ -1,19 +1,20 @@
-  * {
+* {
   margin: 0;
   padding: 0;
 }
 
-a:link, a:visited{
-  color : black;
+a:link,
+a:visited {
+  color: black;
   text-decoration: none;
 }
 
 body {
   font-family: Arial, sans-serif;
-  
+
 }
 
-main{
+main {
   margin: 110px 720px;
   display: flex;
   justify-content: center;
@@ -39,7 +40,7 @@ main{
   padding-top: 10px;
 }
 
-.logo {
+.pickOD-logo {
   width: 100%;
   max-width: 190px;
   margin-top: 55px;
@@ -51,53 +52,64 @@ h2 {
   color: #6A6A6A;
 }
 
-.input-email,.input-cert{
-  margin:0 auto;
+.input-email,
+.verify-code {
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  width:400px;
-  height:28px;
+  width: 400px;
+  height: 28px;
   border-bottom: 2px solid #845AC6;
-  padding : 10px 0 10px 0;
+  padding: 10px 0 10px 0;
 }
-.input-email form, .input-cert form{
+
+
+.input-email form,
+.verify-code form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width:100%;
-}
-.input-email>form>input{
-  height: 27px;
-  width:300px;
-  border : 0;
-}
-.input-cert{
-  display:none;
-}
-.input-cert>form>input{
-  height: 27px;
-  width:230px;
-  border : 0;
-}
-.input-cert>form>span{
-  display: block;
-  width:50px;
-  color : red
+  width: 100%;
 }
 
-.send-email, #send-cert{
-  padding : 5px 10px;
-  border : 1px solid #D6D6D6;
+.input-email>form>input {
+  height: 27px;
+  width: 300px;
+  border: 0;
+}
+
+.verify-code {
+  display: none;
+}
+
+.verify-code>form>input {
+  height: 27px;
+  width: 230px;
+  border: 0;
+}
+
+.verify-code>form>span {
+  display: block;
+  width: 50px;
+  color: red
+}
+
+.send-email,
+#verify {
+  padding: 5px 10px;
+  border: 1px solid #D6D6D6;
   border-radius: 20px;
   cursor: pointer;
 }
-#left-time{
-  width:80px;
+
+#left-time {
+  width: 80px;
 }
-#invalid-cert{
-  width:400px;
-  margin:0 auto;
+
+#invalid-code {
+  width: 400px;
+  margin: 0 auto;
   text-align: left;
   font-size: 10px;
-  color:red;
+  color: red;
 }

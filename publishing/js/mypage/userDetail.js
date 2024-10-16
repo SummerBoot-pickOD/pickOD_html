@@ -24,7 +24,12 @@ document.addEventListener("DOMContentLoaded", function() {
       event.preventDefault();
       // 알림창 띄우기
       alert("비밀번호가 일치하지 않습니다");
+      return;
     }
+    if(confirm("저장하시겠습니까?")==false){
+      return;
+    }
+    
   });
 
   quitButton.addEventListener("click", function(event) {
@@ -36,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function() {
       // 폼 제출 방지
       event.preventDefault();
       // 알림창 띄우기
-      alert("비밀번호가 일치하지 않습니다");
     }else{
         // prompt 창 띄우기
         const userInput = prompt("탈퇴를 원하시면 '지금탈퇴'를 입력하세요.");
@@ -52,21 +56,21 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 //저장하겠습니까 컨펌창 띄우기
-document.addEventListener("DOMContentLoaded", function() {
-  const saveButton = document.getElementById("save");
+// document.addEventListener("DOMContentLoaded", function() {
+//   const saveButton = document.getElementById("save");
 
-  saveButton.addEventListener("click", function(event) {
+//   saveButton.addEventListener("click", function(event) {
 
-    // 컨펌창띄우기
-    const userConfirmed = confirm("저장하시겠습니까?");
+//     // 컨펌창띄우기
+//     const userConfirmed = confirm("저장하시겠습니까?");
     
-    if (!userConfirmed) {
-      // 사용자가 취소를 누르면 
-      event.preventDefault();
-      // 폼 제출을 막음
-    }
-  });
-});
+//     if (!userConfirmed) {
+//       // 사용자가 취소를 누르면 
+//       event.preventDefault();
+//       // 폼 제출을 막음
+//     }
+//   });
+// });
 
 
 // // 탈퇴
