@@ -159,22 +159,10 @@
       <span>신고 상세보기</span><span id="modal-exit">&times;</span>
     </section>
     <section id="report-modal-mid">
-      <div>신고글 분류 : <span id="write-type"></span></div>
-      <div>
-        <input type="radio" name="report-type" disabled>&nbsp;욕설 또는 타인 비방
-      </div>
-      <div>
-        <input type="radio" name="report-type" disabled>&nbsp;희롱, 괴롭힘 또는 노골적인 폭력
-      </div>
-      <div>
-        <input type="radio" name="report-type" disabled>&nbsp;저작권 위반
-      </div>
-      <div>
-        <input type="radio" name="report-type" disabled>&nbsp;기타
-      </div>
-      <div>
-        <input type="radio" name="report-type" disabled>&nbsp;정보 오류
-      </div>
+      <div>신고글 분류 : <span class = "report-modal-info" id="write-type">댓글</span></div>
+      <div>글 작성자 : <span class = "report-modal-info" id="writer"></span></div>
+      <div>신고자 : <span class = "report-modal-info" id="reporter"></span></div>
+      <div>신고분류 : <span class = "report-modal-info" id="report-type">욕설 또는 타인 비방</span></div>
       <textarea id="report-detail-text" placeholder="자세한 상황을 설명해주세요." disabled></textarea>
     </section>
     <section id="report-modal-tail">
@@ -191,25 +179,3 @@
   </div>
 </div>
 </html>
-
-<div class="nonmodal-container getmsg-container">
-  <div class="nonmodal-box">
-    <div class="nonmodal-top">
-      <div class="detail-from">
-        <span>From.</span>
-        <span>신현식</span>
-      </div>
-      <div class="btn-close">&times;</div>
-    </div>
-    <div class="nonmodal-textarea">
-      어쩌구저쩌구
-    </div>
-    <div class="nonmodal-bottom">
-      <div class="report-box"><img src="../../img/message/report.png" alt="신고하기"></div>
-      <div class="btn-replydelete">
-        <div class="delete-msg">삭제</div>
-        <div class="reply-msg">답장</div>
-      </div>
-    </div>
-  </div>
-</div>

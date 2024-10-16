@@ -104,9 +104,9 @@ td {
 }
 
 .modal-container{
-  display: flex;
+  display: none;
   flex-direction: row;
-  height:650px;
+  height:580px;
   position:absolute;
   top: 50%;
   left: 50%;
@@ -115,6 +115,7 @@ td {
 }
 
 .modal-container>*{
+  display:none;
   width:480px;
   border: 1px solid #d9d9d9;
   background-color: white;
@@ -165,10 +166,6 @@ color: black;
 background-color: #d9d9d9;
 border-radius: 20px;
 cursor: pointer;
-}
-
-#report-detail-msg{
-  display: none;
 }
 
 #report-msg-text{
