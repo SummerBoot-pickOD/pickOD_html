@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   toPlace.forEach(btn => {
     btn.addEventListener("click", function () {
-      window.location.href = "../../admin//place/admplaceDetails.html";
+      window.location.href = "../../admin//place/admPlaceDetails.html";
     });
   });
 
