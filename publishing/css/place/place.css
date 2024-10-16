@@ -69,6 +69,7 @@ input{
   height: 200px;
   border-radius: 10px;
   align-items:flex-start;
+  justify-content: space-around;
 }
 
 .tag_area_seoul{
@@ -118,8 +119,8 @@ input{
   position: relative;
 }
 
-.place-filter button:before {
-  content: '';
+.place-filter button:after {
+  content:'';
   display: inline-block;
   width: 1px;
   height: 14px;
@@ -127,8 +128,8 @@ input{
   position: absolute;
   top: 5px;
   left: 45%;
-
 }
+
 .place-filter button:first-child:before{
   background: none;
 }
