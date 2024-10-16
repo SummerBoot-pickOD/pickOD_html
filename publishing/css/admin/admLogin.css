@@ -50,6 +50,16 @@ input {
   border-radius: 10px;
 }
 
+
+#invalid-login {
+  width: 100%;
+  max-width: 302px;
+  margin: -20px auto 50px auto;
+  font-size: 10px;
+  text-align: left;
+  color: red;
+}
+
 .pw {
   margin-bottom: 32px;
 }
@@ -71,7 +81,7 @@ button:hover {
   cursor: pointer;
 }
 
-.forgot-password {
+#forgot-password {
   display: block;
   text-align: right;
   margin-top: 10px;
@@ -81,6 +91,6 @@ button:hover {
   font-size: 13px;
 }
 
-.forgot-password:hover {
+#forgot-password:hover {
   cursor: pointer;
 }
