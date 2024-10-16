@@ -13,7 +13,7 @@ const closeBtn = document.querySelector('.close-btn');
 
 
 openModal.forEach(btn => {
-  addEventListener("click", function () {
+  btn.addEventListener("click", function () {
     // console.log("clicked")
     usrDetailModal.style.display = "flex";
   })
