@@ -29,15 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     slider.setAttribute('src', images[currentIndex]);
   });
 
-  // 찜하기 -> 신고하기로 변경 (그냥 보여지는 부분)
-  // saveimg_btn.addEventListener('click', () => {
-  //   if (saveimg_btn.getAttribute('src') === "../../img/main/unsaved.png") {
-  //     saveimg_btn.setAttribute('src', "../../img/main/saved.png");
-  //   } else {
-  //     saveimg_btn.setAttribute('src', "../../img/main/unsaved.png");
-  //   }
-  // });
-
   //신고하기 아이콘 신고 여부에 따라 다르게 표시됨 
   let reported = 'Y';  // 실제로는 서버에서 불러와야 함
 
