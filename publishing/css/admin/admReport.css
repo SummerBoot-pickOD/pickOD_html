@@ -31,7 +31,7 @@ h1 {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  margin-left: 15px;
+  margin:0 15px;
 }
 
 label {
@@ -98,6 +98,78 @@ td {
   padding: 15px;
 }
 
-#report-detail-modal{
+#sanction-count{
+  width:110px;
+  margin:0 40px 0 20px;
+}
+
+.modal-container{
   display: none;
+  flex-direction: row;
+  height:580px;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: none;
+}
+
+.modal-container>*{
+  display:none;
+  width:480px;
+  border: 1px solid #d9d9d9;
+  background-color: white;
+}
+
+#report-modal-top{
+  padding:28px;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:50px;
+  font-size:36px;
+  font-weight: 600;
+}
+
+#modal-exit{
+  cursor:pointer;
+}
+
+#report-modal-mid{
+  width:75%;
+  margin:20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#report-modal-mid>div{
+  margin: 10px 0;
+}
+
+#report-detail-text{
+  margin-top: 30px;
+  height:150px;
+  resize: none;
+}
+
+#report-modal-tail{
+  margin: 28px auto 0 auto;
+  width:30%;
+}
+
+#report-modal-tail>button{
+padding : 5px 10px;
+width:100%;
+border: 0;
+color: black;
+background-color: #d9d9d9;
+border-radius: 20px;
+cursor: pointer;
+}
+
+#report-msg-text{
+  margin-top: 30px;
+  height:300px;
+  resize: none;
 }

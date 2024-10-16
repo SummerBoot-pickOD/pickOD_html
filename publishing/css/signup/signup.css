@@ -30,27 +30,6 @@ main{
   height: 1000px;
 }
 
-.back {
-  display: block;
-  max-width: 20px;
-  margin: 10px;
-  cursor: pointer;
-  padding-left: 430px;
-  padding-top: 10px;
-}
-
-.logo {
-  width: 100%;
-  max-width: 190px;
-  margin-top: 55px;
-}
-
-h2 {
-  font-size: 20px;
-  margin-bottom: 85px;
-  color: #6A6A6A;
-}
-
 .input-section{
   margin-top: 30px;
   width:400px;
@@ -75,16 +54,29 @@ h2 {
   border:0;
   border-bottom: 3px solid #FEF2F2;
   padding-top : 5px;
-}
-.text-input{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+#cert{
+  display: none;
+}
+
 .text-input input{
   width : 300px;
   border:0
 }
+#cert input{
+  width : 250px;
+}
+#left-time, .invalid{
+  color: red;
+}
+.invalid{
+  text-align: left;
+  font-size: 10px;
+}
+
 #pswd-container input{
   width : 400px;
 }
@@ -103,6 +95,10 @@ h2 {
   width : 100px;
   text-align: center;
 }
+#email-container{
+  height:122px;
+}
+
 #birthdate-container .select-input select{
   margin-right: 10px;
   width : 70px;

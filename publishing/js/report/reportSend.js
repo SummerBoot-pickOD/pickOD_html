@@ -6,7 +6,7 @@ $("#report-modal-tail>button").click(function(){
   }
 
   alert("신고가 정상적으로 등록되었습니다.");
-  $("#report-modal").css('display','none');
+  $(".modal-container").css('display','none');
 });
 
 $("#modal-exit").click(function(){

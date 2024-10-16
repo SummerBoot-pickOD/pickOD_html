@@ -6,6 +6,7 @@ $(function () {
   $(function () {
   $("#footer").load("../main/footer.html");
   });
+
 // 전체클릭 기능
 let checkAll = document.querySelector('.all');
 let checkItem = document.querySelectorAll('.item');
@@ -34,7 +35,7 @@ checkItem.forEach(function(e) {
 //휴지통 이동
 const btnDelete = document.querySelector('.btn-delete');
 console.log(btnDelete);
-const mailboxList = document.querySelectorAll('.mailbox-container');
+const mailboxList = document.querySelectorAll('.mailbox-list');
 console.log(mailboxList);
 
 btnDelete.addEventListener('click', function() {
@@ -53,51 +54,142 @@ btnDelete.addEventListener('click', function() {
           // console.log(msgDelList);
           const messageItem = checkbox.closest('.mailbox-list');
           console.log(messageItem);
-          mailboxList.forEach(list => {
-            list.removeChild(messageItem);
-          }); // 받은 쪽지함에서 삭제
-          // trashList.appendChild(messageItem);   // 휴지통으로 이동
+          messageItem.remove();
+           // 받은 쪽지함에서 삭제
           checkbox.checked = false; // 체크 상태 초기화
       }
   });
 });
 
-//쪽지클릭시 쪽지내용보기
-let mailContent = document.querySelectorAll('.mail-content');
-mailContent.forEach(btn => {
-  btn.addEventListener("click", function(){
-    let getMsgContainer = document.querySelector('.getmsg-container');
-    getMsgContainer.style.display="block";
-  })
-});
 
-let replyMsg = document.querySelector('.reply-msg');
-replyMsg.addEventListener("click", function(){
-    let sendMsgContainer = document.querySelector('.sendmsg-container');
-    sendMsgContainer.style.display="block";
+// 쪽지띄우기
+document.addEventListener('DOMContentLoaded', function() {
+  // 모든 mailbox-list 요소들을 가져오기
+  var mailboxLists = document.querySelectorAll('.mailbox-list');
+
+  // 각 mailbox-list 요소에 클릭 이벤트 추가
+  mailboxLists.forEach(function(mailbox) {
+    mailbox.addEventListener('click', function() {
+      //체크박스부분은제외
+      if (event.target.tagName === 'INPUT' && event.target.type === 'checkbox') {
+        return; // 체크박스를 클릭하면 함수 실행을 멈춤
+      }
+
+      // 읽으면 편지 읽음표시기능
+      var readMail =this.querySelector('.mail-open img');
+      readMail.src = '../../img/message/받은편지.png';
+      // 클릭한 mailbox-list 안의 mail-from 텍스트 가져오기
+      var senderText = this.querySelector('.mail-from').innerText;
+      // 클릭한 mailbox-list 안의 mail-content 텍스트 가져오기
+      var contentText = this.querySelector('.mail-content').innerText;
+
+      // 모달의 ppl-from 요소에 발신자 텍스트 설정
+      document.querySelector('.ppl-from').innerText = senderText;
+      // 모달의 nonmodal-textarea에 쪽지 내용 텍스트 설정
+      document.querySelector('.nonmodal-textarea').innerText = contentText;
+
+      // 모달 보이기
+      document.querySelector('.getmsg-container').style.display = 'block';
+
+      // 답장기능
+      let replyMsg = document.querySelector('.reply-msg');
+      replyMsg.addEventListener("click", function(){
+      let sendMsgContainer = document.querySelector('.sendmsg-container');
+      sendMsgContainer.style.display="block";
+
+      document.querySelector('.ppl-to').innerText = senderText;
+    
+      });
+    });
   });
 
 
-//쪽지 닫기 기능
-// let btnClose = document.querySelector('.btn-close');
-// console.log(btnClose);
 
-// btnClose.addEventListener("click", function(){
-//   const closeItem = btnClose.closest('.nonmodal-container');
-//   // let nonmodalContainer = document.querySelector('.nonmodal-container');
-//   // console.log(nonmodalContainer);
-//   closeItem.style.display = 'none';
-// })
-// 아 이건 하나만제거되고;;
-// 아래건 전부제거가되네........난감하다
+  // // 모달 닫기 버튼 클릭 시 모달 숨기기 -> 따로 빼서만듦
+  // document.querySelector('.btn-close').addEventListener('click', function() {
+  //   document.querySelector('.getmsg-container').style.display = 'none';
+  // });
+});
+
+
+
+
+// 쪽지닫기기능
 let btnClose = document.querySelectorAll('.btn-close');
 btnClose.forEach(btn => {
   btn.addEventListener("click", function() {
-    let nonmodalContainers = document.querySelectorAll('.nonmodal-container');
+    let nonmodalContainers = this.closest('.nonmodal-container');
     
-    nonmodalContainers.forEach(container => {
-      container.style.display = 'none';
-    });
+    if(nonmodalContainers){
+      nonmodalContainers.style.display='none';
+    }
   });
 });
 
+// 게시물 및 페이지네이션 처리
+
+const mailboxLists = Array.from(document.querySelectorAll('.mailbox-list'));
+const MailsPerPage = 10;
+let currentPage = 1;
+let totalPages;
+
+function displayMails() {
+  const postContainer = document.getElementById('mails');
+  postContainer.innerHTML = ''; // 현재 표시된 항목 초기화
+
+  const startIndex = (currentPage - 1) * MailsPerPage;
+  const endIndex = Math.min(startIndex + MailsPerPage, mailboxLists.length); // 실제 항목 수와 비교하여 인덱스 계산
+
+  // 해당 페이지에 맞는 mailbox-list만 표시
+  for (let i = startIndex; i < endIndex; i++) {
+    postContainer.appendChild(mailboxLists[i]);
+  }
+}
+
+
+function setupPagination() {
+  const paginationContainer = document.getElementById('pagination');
+  paginationContainer.innerHTML = ''; // 페이지네이션 초기화
+
+  totalPages = Math.ceil(mailboxLists.length / MailsPerPage); // 실제 항목 수로 페이지 수 계산
+
+  const createButton = (pageNum, text) => {
+    const button = document.createElement('button');
+    button.textContent = text;
+    button.disabled = (currentPage === pageNum);
+    button.addEventListener('click', () => {
+      currentPage = pageNum;
+      displayMails(); // 페이지 클릭 시 항목 업데이트
+      setupPagination(); // 페이지네이션 버튼 다시 설정
+    });
+    return button;
+  };
+
+  // 이전 페이지 버튼
+  if (currentPage > 1) {
+    const prevButton = createButton(currentPage - 1, '<');
+    paginationContainer.appendChild(prevButton);
+  }
+
+  // 페이지 버튼 생성
+  for (let i = 1; i <= totalPages; i++) {
+    const button = createButton(i, i);
+    paginationContainer.appendChild(button);
+  }
+
+  // 다음 페이지 버튼
+  if (currentPage < totalPages) {
+    const nextButton = createButton(currentPage + 1, '>');
+    paginationContainer.appendChild(nextButton);
+  }
+};
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    setupPagination();
+    displayMails();
+  });
+
+
+
+  
