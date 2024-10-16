@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management System</title>
+  <link rel="stylesheet" href="../../css/report/admReport.css">
+  <link rel="stylesheet" href="../../css/admin/admHeader.css">
+  <link rel="stylesheet" href="../../css/main/footer.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script defer src="../../js/report/admReport.js"></script>
+</head>
+
+<body>
+  <div id="header"></div>
+  <main>
+    <h1>신고 관리</h1>
+    <div class="container">
+      <div class="search">
+        <select id="condition">
+          <option value="" disabled selected>조건을 선택하세요</option>
+          <option value="name">글 작성자</option>
+          <option value="nick">신고자</option>
+          <option value="sus">상세 내용</option>
+        </select>
+        <input type="text" placeholder="검색어를 입력하세요." />
+        <!-- <label for="status">상태:</label> -->
+        <button type="button" class="enter">검색</button>
+      </div>
+
+      <table>
+        <tr class="table-head">
+          <th>신고 사유</th>
+          <th>일시</th>
+          <th>글 작성자</th>
+          <th>신고자</th>
+          <th>상세 내용</th>
+          <th>상세보기</th>
+        </tr>
+
+        <tr>
+          <td>pickpickkim@gmail.com</td>
+          <td>김픽미</td>
+          <td>pickme1234</td>
+          <td>3</td>
+          <td>2</td>
+          <td class="last-col"><button type="button">상세보기</button></td>
+        </tr>
+        <tr>
+          <td>pickpickkim@gmail.com</td>
+          <td>김픽미</td>
+          <td>pickme1234</td>
+          <td>3</td>
+          <td>2</td>
+          <td class="last-col"><button type="button">상세보기</button></td>
+        </tr>
+        <tr>
+          <td>pickpickkim@gmail.com</td>
+          <td>김픽미</td>
+          <td>pickme1234</td>
+          <td>3</td>
+          <td>2</td>
+          <td class="last-col"><button type="button">상세보기</button></td>
+        </tr>
+        <tr>
+          <td>pickpickkim@gmail.com</td>
+          <td>김픽미</td>
+          <td>pickme1234</td>
+          <td>3</td>
+          <td>2</td>
+          <td class="last-col"><button type="button" class="details">상세보기</button></td>
+        </tr>
+        <tr>
+          <td>pickpickkim@gmail.com</td>
+          <td>김픽미</td>
+          <td>pickme1234</td>
+          <td>3</td>
+          <td>2</td>
+          <td class="last-col"><button type="button">상세보기</button></td>
+        </tr>
+        <tr>
+          <td>pickpickkim@gmail.com</td>
+          <td>김픽미</td>
+          <td>pickme1234</td>
+          <td>3</td>
+          <td>2</td>
+          <td class="last-col"><button type="button">상세보기</button></td>
+        </tr>
+        <tr>
+          <td>pickpickkim@gmail.com</td>
+          <td>김픽미</td>
+          <td>pickme1234</td>
+          <td>3</td>
+          <td>2</td>
+          <td class="last-col"><button type="button">상세보기</button></td>
+        </tr>
+        <tr>
+          <td>pickpickkim@gmail.com</td>
+          <td>김픽미</td>
+          <td>pickme1234</td>
+          <td>3</td>
+          <td>2</td>
+          <td class="last-col"><button type="button">상세보기</button></td>
+        </tr>
+        <tr>
+          <td>pickpickkim@gmail.com</td>
+          <td>김픽미</td>
+          <td>pickme1234</td>
+          <td>3</td>
+          <td>2</td>
+          <td class="last-col"><button type="button">상세보기</button></td>
+        </tr>
+        <tr>
+          <td>pickpickkim@gmail.com</td>
+          <td>김픽미</td>
+          <td>pickme1234</td>
+          <td>3</td>
+          <td>2</td>
+          <td class="last-col"><button type=" button">상세보기</button></td>
+        </tr>
+        <!-- 맨 아래칸, 그냥 회색 섹션으로 만들고 싶음. -->
+        <tr>
+          <td colspan="7" class="last-row"></td>
+        </tr>
+      </table>
+    </div>
+  </main>
+  <div id='footer'></div>
+</body>
+<div id = "report-detail-modal"></div>
+
+</html>

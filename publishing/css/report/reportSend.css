@@ -31,8 +31,11 @@
     align-items: center;
     height:50px;
     font-size:36px;
+    font-weight: 600;
 }
-
+#modal-exit{
+    cursor:pointer;
+}
 #report-modal-mid{
     width:75%;
     margin:20px auto;
@@ -45,6 +48,7 @@
 }
 
 #report-detail{
+    margin-top: 30px;
     height:150px;
     resize: none;
 }
