@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 0px 300px;
+}
+
+h1 {
+  padding-top: 110px;
+  font-size: 28px;
+}
+
+.container {
+  padding-top: 5px;
+  font-size: 16px;
+  padding-bottom: 100px;
+}
+
+.search {
+  background-color: #FAFAFA;
+  display: flex;
+  align-items: center;
+}
+
+.enter {
+  padding: 4px 20px;
+  background-color: #A1A1A1;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin:0 15px;
+}
+
+label {
+  margin: 8px;
+  justify-content: center;
+}
+
+input[type="text"] {
+  padding: 5px;
+  padding-right: 70px;
+  margin: 6px 30px 6px 6px;
+  border: solid 1px #e0dfdf;
+}
+
+
+select {
+  padding: 5px;
+  margin-left: 10px;
+  border: solid 1px #e0dfdf;
+}
+
+button {
+  padding: 3px 5px;
+  background-color: #A1A1A1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.table-head {
+  background-color: #FAFAFA;
+}
+
+th {
+  padding: 5px 0px;
+  text-align: center;
+  border-top: 1px solid #E9E9E9;
+  border-bottom: 1px solid #E9E9E9;
+}
+
+td {
+  border: 1px solid #E9E9E9;
+  border-left: none;
+  border-right: none;
+  padding: 5px 0px;
+  text-align: center;
+  border-left: none;
+}
+
+.last-col {
+  border-right: none;
+}
+
+.last-row {
+  background-color: #FAFAFA;
+  border: none;
+  padding: 15px;
+}
+
+#sanction-count{
+  width:110px;
+  margin:0 40px 0 20px;
+}
+
+.modal-container{
+  display: flex;
+  flex-direction: row;
+  height:650px;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: none;
+}
+
+.modal-container>*{
+  width:480px;
+  border: 1px solid #d9d9d9;
+  background-color: white;
+}
+
+#report-modal-top{
+  padding:28px;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:50px;
+  font-size:36px;
+  font-weight: 600;
+}
+
+#modal-exit{
+  cursor:pointer;
+}
+
+#report-modal-mid{
+  width:75%;
+  margin:20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#report-modal-mid>div{
+  margin: 10px 0;
+}
+
+#report-detail-text{
+  margin-top: 30px;
+  height:150px;
+  resize: none;
+}
+
+#report-modal-tail{
+  margin: 28px auto 0 auto;
+  width:30%;
+}
+
+#report-modal-tail>button{
+padding : 5px 10px;
+width:100%;
+border: 0;
+color: black;
+background-color: #d9d9d9;
+border-radius: 20px;
+cursor: pointer;
+}
+
+#report-detail-msg{
+  display: none;
+}
+
+#report-msg-text{
+  margin-top: 30px;
+  height:300px;
+  resize: none;
+}
