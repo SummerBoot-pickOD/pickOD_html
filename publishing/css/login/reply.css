@@ -2,6 +2,12 @@
   margin : 0;
   padding:0;
 }
+
+#reply-container{
+  width:60%;
+  min-width: 550px;
+  margin: 0 auto;
+}
 .name-box{
   font-size: 28px;
   font-weight:bold;
@@ -30,21 +36,65 @@
   font-weight: bold;
 }
 #reply{
+  padding: 10px 20px;
   list-style:none;
 }
 
 .written{
+  margin-top:10px;
   display: flex;
+  border-bottom: 1px solid #d9d9d9;
 }
-.written>*{
-  border: 1px solid black;
-}
+
 .written .reply-image{
+  display: flex;
+  justify-content: center;
   width: 10%;
 }
+.reply-image img{
+  margin-top: 5px;
+  width:50px;
+  height:50px;
+  border-radius: 25px;
+}
+
 .written .reply-content{
+  padding : 0 20px;
   width: 80%;
 }
+.reply-content .user{
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.reply-content .likes{
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.reply-content .likes>img{
+  width: 24px;
+  height: 24px;
+}
+
 .written .reply-buttons{
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
   width: 10%;
+}
+.reply-buttons img{
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+#reply-more{
+  display: block;
+  margin : 10px auto;
+  width:80px;
+  height:30px;
+  border-radius: 15px;
+  border:1px solid black;
 }
