@@ -1,5 +1,5 @@
 $(function () {
-  $("#header").load("../../html/main/header.html");
+  $("#header").load("../../html/admin/admHeader.html");
 });
 
 $(function () {
