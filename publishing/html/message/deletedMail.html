@@ -61,9 +61,9 @@
             <div class="check-item">
               <input type="checkbox" name="item" class="item">
             </div>
-            <div class="mail-open" name=""><img src="../../img/message/받은편지.png" alt=""></div>
+            <div class="mail-open" name=""><img src="../../img/message/쪽지함.png" alt=""></div>
             <div class="mail-from" name="">신현식</div>
-            <div class="mail-to"></div>
+            <div class="mail-to">박가빈</div>
             <div class="mail-content" name="">어쩌구저쩌구</div>
             <div class="mail-date" name="">2024-10-04</div>
           </div>
@@ -72,29 +72,30 @@
               <input type="checkbox" name="item" class="item">
             </div>
             <div class="mail-open" name=""><img src="../../img/message/쪽지함.png" alt=""></div>
-            <div class="mail-from"></div>
-            <div class="mail-to" name="">박가빈</div>
+            <div class="mail-from">박가빈</div>
+            <div class="mail-to mail-who" name="">신현식</div>
             <div class="mail-content" name="">어쩌구저쩌구</div>
             <div class="mail-date" name="">2024-10-04</div>
           </div>
         </div>
       </section>
+
       <section>
         <form action="#" method="get">
           <div class="nonmodal-container getmsg-container">
             <div class="nonmodal-box">
               <div class="nonmodal-top">
                 <div class="detail-from">
-                  <span>From.</span>
-                  <span>신현식</span>
+                  <span>to.</span>
+                  <span class="ppl-from">신현식</span>
                 </div>
                 <div class="btn-close">&times;</div>
               </div>
               <div class="nonmodal-textarea">
-                어쩌구저쩌구
+
               </div>
               <div class="nonmodal-bottom">
-                <div class="report-box"><img src="../../img/message/report.png" alt="신고하기"></div>
+                <div class="report-box"><a href=""><img src="../../img/message/report.png" alt="신고하기"></a></div>
                 <div class="btn-replydelete">
                   <div class="btn-msg-return">복원</div>
                   <div class="btn-msg-delete">영구삭제</div>
@@ -103,6 +104,13 @@
             </div>
           </div>
         </form>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="mails" id="mails"></div>
+          <div class="pagination" id="pagination"></div>
+        </div>
       </section>
     </main>
     <footer>
