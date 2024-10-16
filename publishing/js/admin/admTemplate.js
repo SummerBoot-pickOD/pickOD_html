@@ -15,6 +15,18 @@ document.addEventListener('DOMContentLoaded', function () {
       window.location.href = "../../html/admin/admTemplateDetails.html";
     })
   });
+
+  //삭제 버튼 
+  const deleteBtn = document.querySelectorAll(".delete");
+  deleteBtn.forEach(btn => {
+    btn.addEventListener("click", function () {
+      const confirmed = confirm("정말 해당 템플릿을 삭제하시겠습니까?");
+      if (confirmed) {
+        // 실제 삭제 로직 추가 필요
+        alert("템플릿이 삭제되었습니다.")
+      }
+    })
+  });
 });
 
 
