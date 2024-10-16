@@ -151,6 +151,11 @@ h2{
     border: none;
     background-color: transparent;
     cursor: pointer;
+    font-weight: normal
+}
+
+.bold {
+    font-weight: bold; /* 클릭된 버튼에 적용할 bold 스타일 */
 }
 
 .container {
@@ -176,6 +181,7 @@ h2{
     overflow: hidden;
     padding-top: 25px;
     padding-bottom: 10px; /* 하단 마진을 위한 패딩 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .post-image {
