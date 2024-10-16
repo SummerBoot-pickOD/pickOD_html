@@ -75,8 +75,8 @@ body{
 }
 
 .schedule-content, .schedule-tag-content, .schedule-thema-content{
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 24px;
+
 }
 
 .container-display {
@@ -87,7 +87,7 @@ body{
 .schedule-container, .tag-select-container, .thema-container {
     margin: 20px
 }
-
+/*  템플릿 내용 */
 .Day-container{
     margin: -65px 0;
 }
@@ -130,7 +130,8 @@ body{
 
 .numbers {
     display: flex;
-    justify-content: space-around; /* 숫자 사이를 균등하게 분배 */
+    justify-content: center; /* 숫자들을 중앙으로 모음 */
+    gap: 21%; /* 숫자 간의 간격 조정 */
     width: 100%;
     position: relative;
     top: -2px; /* 숫자를 선 위로 올림 */
@@ -144,7 +145,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 20px;
     transform: translateY(-50%); /* 숫자를 선 위로 정확하게 올리기 위해 사용 */
 }
 
@@ -158,14 +159,85 @@ body{
 .location {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 80%;
+    gap: 8px; /* 사진 간의 간격 조절 */
 }
 
+.location img {
+    flex-grow: 1; /* 사진들이 컨테이너의 남는 공간을 채우도록 설정 */
+    min-width: 50px; /* 너무 작아지지 않도록 최소 너비 설정 */
+    object-fit: cover; /* 사진 비율을 유지하면서 컨테이너에 맞추기 */
+}
+
+.place {
+    position: relative; /* 위치 고정 */
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: center;
+    width: calc(26% - 10px); /* 사진 간의 간격을 줄이기 위해 조정 */
+    margin: 0; /* 여백 제거 */
+    height: 280px; /* 이미지 높이와 일치 */
+    overflow: hidden; /* 자식 요소가 부모 요소를 넘치지 않도록 설정 */
+}
+
+.image-container {
+    position: relative; /* 이미지와 텍스트를 위한 컨테이너 */
+    height: 100%; /* 높이를 100%로 설정하여 사진 크기 유지 */
+    overflow: hidden; /* 이미지가 넘치지 않도록 설정 */
+    border-radius: 10px; /* 둥글게 */
+}
+
+.place img {
+    width: 100%; /* 이미지 폭을 100%로 설정 */
+    height: 100%; /* 이미지 높이를 부모 요소의 높이에 맞춤 */
+    object-fit: cover; /* 이미지 비율 유지 */
+    border-radius: 10px;
+    position: relative; /* 이미지를 상대 위치로 설정 */
+    z-index: 1; /* 이미지가 기본 레이어에 있도록 설정 */
+}
+
+.place-name {
+    position: absolute;
+    color: white; /* 글자 색을 흰색으로 */
+    font-weight: bold;
+    font-size: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 */
+    z-index: 2; /* 글씨가 이미지 위에 위치하도록 설정 */
+    transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+    line-height: 1.2; /* 글씨 중앙 정렬을 위한 라인 높이 */
+}
+
+.place.clicked {
+    background-color: rgba(189, 83, 83, 0.5); /* 반투명 색상 */
+    border-radius: 10px;
+    z-index: 3; /* 배경이 텍스트 위에 나타나도록 설정 */
+    height: 275px; /* 배경 높이 5px 줄이기 */
+}
+
+.place.clicked .place-name {
+    opacity: 1; /* 클릭 시 글씨가 완전히 보이도록 설정 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 유지 */
+}
+
+.place.clicked .image-container {
+    height: 280px; /* 기본 높이를 유지 */
+}
+
+/* 클릭 시 배경을 올리기 위한 설정 */
+.place.clicked img {
+    opacity: 0.4; /* 클릭 시 이미지의 불투명도 조정 */
+}
+
+/* 양쪽 화살표 */
 .arrow-button {
     background: none; /* 버튼 배경 제거 */
     border: none; /* 버튼 테두리 제거 */
     cursor: pointer; /* 클릭 가능하게 설정 */
-    z-index: 1; /* 화살표를 위로 올리기 위한 z-index 설정 */
+    z-index: 4; /* 화살표를 가장 위로 올리기 위한 z-index 설정 */
     width: 50px; /* 화살표 너비 조정 */
 }
 
@@ -177,44 +249,30 @@ body{
     margin-left: -120px; /* 오른쪽 화살표와 사진 간격 조정 */
 }
 
-.place {
-    position: relative;
-    border: none;
-    background: none;
-    cursor: pointer;
-    text-align: center;
-    width: calc(20% - 10px); /* 사진 간의 간격을 줄이기 위해 조정 */
-    margin: 0; /* 여백 제거 */
-}
 
-.place img {
-    width: 100%; /* 이미지 폭을 100%로 설정 */
-    height: 280px; /* 이미지 높이 조정 (기존보다 더 키움) */
-    object-fit: cover; /* 이미지 비율 유지 */
-    border-radius: 10px;
-}
 
-.place-name {
-    position: absolute;
-    color: white; /* 글자 색을 흰색으로 */
-    font-weight: bold;
-    font-size: 14px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* 중앙 정렬 */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 */
-}
-
-.place.clicked {
-    background-color: rgba(189, 83, 83, 0.5); /* 반투명 색상 */
-    border-radius: 10px;
-}
-
-.template-detail-container{
+/* 컨텐츠 내용 */
+.template-detail-container {
+    position: relative; /* 삼각형을 상대적으로 배치할 수 있도록 설정 */
     width: 90%;
     height: 1050px;
     background-color: white;
     margin: 50px;
+    border: 1px solid #EC0202;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid white;
+    position: absolute;
+    top: -25px; /* 삼각형이 컨테이너 바로 위에 나타나도록 설정 */
+    left: 50%; /* 초기 위치를 중앙으로 설정 */
+    transform: translateX(-50%); /* 정확하게 중앙에 위치 */
+    z-index: 5;
+    border-bottom-color: #EC0202; /* 삼각형의 테두리 색상 */
 }
 
 .template-detail-title{
@@ -231,7 +289,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .title{
@@ -277,7 +335,7 @@ body{
 
 .near-location-recommend{
     color: black;
-    font-size: 30px;
+    font-size: 27px;
     margin-right: 100px;
 }
 
@@ -287,5 +345,13 @@ body{
     text-align: center;
     margin: 0 10px;
     color: black;
+
+}
+
+.maps-API-container{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px;
+    background-color: #A1A1A1;
 
 }
