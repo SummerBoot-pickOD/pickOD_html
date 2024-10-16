@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const total_btn=document.querySelector('.total_area_btn');
+  const total_btn=document.querySelector('.total_area_btn');
   const area_btn = document.querySelectorAll('.tag_area li button');
   const area_btn_seoul = document.querySelectorAll('.tag_area_seoul button');
   const area_btn_geonggi = document.querySelectorAll('.tag_area_geonggi button');
@@ -18,13 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   area_btn.forEach(button => {
     button.addEventListener('click', () => {
-      if(button.style.border==='1px solid gray'){
-        button.style.backgroundColor='';
-        button.style.border='1px  solid #FEF2F2';
+      const currentColor = button.style.backgroundColor.toLowerCase();
+      if(currentColor === 'rgb(251, 181, 181)' || currentColor === '#fbb5b5'){
+        button.style.backgroundColor='#fef2f2';
 
       }else{
         button.style.backgroundColor = '#FBB5B5';
-        button.style.border = '1px solid gray';
         area_btn_totalseoul.style.fontWeight='' 
       
       }
@@ -47,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
   });
+  
 
   area_btn_totalgeonggi.addEventListener('click',()=>{
     area_btn_geonggi.forEach(button=>{
@@ -180,4 +180,21 @@ document.addEventListener('DOMContentLoaded', () => {
         $(function () {
         $("#footer").load("../main/footer.html");
         });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // 기본적으로 '최신순' 버튼에 bold 적용
+  const latestButton = document.querySelector('.content-latest');
+  latestButton.classList.add('bold');
+
+  // 모든 버튼에 대해 클릭 이벤트 리스너 추가
+  const buttons = document.querySelectorAll('button');
+  buttons.forEach(button => {
+      button.addEventListener('click', function() {
+          // 모든 버튼에서 bold 클래스 제거
+          buttons.forEach(btn => btn.classList.remove('bold'));
+          // 클릭된 버튼에 bold 클래스 추가
+          this.classList.add('bold');
+      });
+  });
 });

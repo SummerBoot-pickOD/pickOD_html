@@ -17,8 +17,9 @@ let myTripContainer = document.querySelector('.mytrip-container');
 let btnPlanList = document.querySelector('.btn-planlist');
 let myPlanContainer = document.querySelector('.myplan-container');
 
-// console.log(btnCheckList);
-// console.log(checkListContainer);
+let ResultDetail = document.querySelector('.result-detail');
+let ResultDetail2 = document.querySelector('.result-detail2');
+let ResultDetail3 = document.querySelector('.result-detail3');
 
 btnCheckList.addEventListener("click", function() {
   checkListContainer.style.display = 'grid';
@@ -27,6 +28,9 @@ btnCheckList.addEventListener("click", function() {
   btnCheckList.style.color = 'black';
   btnTripList.style.color = '#a1a1a1';
   btnPlanList.style.color = '#a1a1a1';
+  ResultDetail.style.display = 'flex';
+  ResultDetail2.style.display = 'none';
+  ResultDetail3.style.display = 'none';
 });
 
 btnTripList.addEventListener("click", function() {
@@ -36,6 +40,9 @@ btnTripList.addEventListener("click", function() {
   btnTripList.style.color = 'black';
   btnCheckList.style.color = '#a1a1a1';
   btnPlanList.style.color = '#a1a1a1';
+  ResultDetail2.style.display = 'flex';
+  ResultDetail.style.display = 'none';
+  ResultDetail3.style.display = 'none';
 });
 
 btnPlanList.addEventListener("click", function(){
@@ -45,5 +52,53 @@ btnPlanList.addEventListener("click", function(){
   btnPlanList.style.color = 'black';
   btnTripList.style.color = '#a1a1a1';
   btnCheckList.style.color = '#a1a1a1';
+  ResultDetail.style.display = 'none';
+  ResultDetail2.style.display = 'none';
+  ResultDetail3.style.display = 'flex';
 });
 
+let searchFp = document.querySelector('.search-fp');
+let searchSp = document.querySelector('.search-sp');
+let searchTpl = document.querySelector('.search-tpl');
+
+searchFp.addEventListener('click', ()=>{
+  searchFp.style.fontWeight = 'bold';
+  searchSp.style.fontWeight = 'normal';
+  searchTpl.style.fontWeight = 'normal';
+
+  // db연결하면 색인기능 들어감
+});
+
+searchSp.addEventListener('click', ()=>{
+  searchSp.style.fontWeight = 'bold';
+  searchFp.style.fontWeight = 'normal';
+  searchTpl.style.fontWeight = 'normal';
+  
+  // db연결하면 색인기능 들어감
+});
+
+searchTpl.addEventListener('click', ()=>{
+  searchTpl.style.fontWeight = 'bold';
+  searchSp.style.fontWeight = 'normal';
+  searchFp.style.fontWeight = 'normal';
+  
+  // db연결하면 검색기능 들어감
+});
+
+
+let searchRecent = document.querySelector('.search-recent');
+let searchDate = document.querySelector('.search-date');
+
+searchRecent.addEventListener('click', ()=>{
+  searchRecent.style.fontWeight = 'bold';
+  searchDate.style.fontWeight = 'normal';
+  
+  // db연결하면 색인기능 들어감
+});
+
+searchDate.addEventListener('click', ()=>{
+  searchDate.style.fontWeight = 'bold';
+  searchRecent.style.fontWeight = 'normal';
+  
+  // db연결하면 검색기능 들어감
+});

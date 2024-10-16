@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="../../css/main/header.css">
     <link rel="stylesheet" href="../../css/main/footer.css">
     <link rel="stylesheet" href="../../css/journal/journalCreate.css">
-    <link rel="stylesheet" href="../../js/journal/journalCreate.js">
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    <script src="https://code.jquery.com/jquery-3.7.1.js?v=1.0" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../../js/journal/journalCreate.js"></script>
 </head>
 <body>
+    <div id="header"></div>
     <form class="title-container" method="get">
         <input class="title" type="text" placeholder="제목을 입력하세요."onfocus="this.placeholder=''" onblur="this.placeholder='제목을 입력하세요.'">
     </form>
@@ -95,47 +97,29 @@
             </div>
         </div>
     </div>
-    <div class="folder">
-        <div class="tab">
-            <div id="dayContainer">
-                <span class="day active">DAY 1</span>
+    <div class="Day-container">
+        <button class="Day-button" type="button">
+            DAY1
+        </button>
+        <button class="Day-plus-button" type="button">+</button>
+    </div>
+    <div class="create-container">
+        <div class="create-box">
+            <div class="maps-API">지도입니당</div>
+            <div class="add-location">
+                <input class="add-location-text" type="text" placeholder="장소를 입력해주세요."onfocus="this.placeholder=''" onblur="this.placeholder='장소를 입력해주세요.'">
+                <button class="add-location-button" type="button">+</button>
             </div>
-            <button id="addButton">+</button>
+            <div class="summernote-container">
+                <div class="summernote">썸머노트 적용</div>
+            </div>
         </div>
     </div>
-
-
+    <div class="create-button-container">
+        <button class="delete-button" type="button">삭 제</button>
+        <button class="load-button" type="button">저 장</button>
+        <button class="upload-button" type="button">등 록</button>
     </div>
-<!-- Flatpickr 라이브러리 -->
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script>
-    // Flatpickr 달력 초기화 (시작일)
-    flatpickr("#start-date", {
-        dateFormat: "Y-m-d", // 날짜 형식 (예: 2024-10-13)
-        locale: "ko",        // 한국어 로케일
-        position: "auto"     // 달력의 위치를 자동으로 조정
-    });
-    
-
-    // Flatpickr 달력 초기화 (종료일)
-    flatpickr("#end-date", {
-        dateFormat: "Y-m-d", // 날짜 형식 (예: 2024-10-13)
-        locale: "ko",        // 한국어 로케일
-        position: "left"    // 달력을 아래쪽에 고정
-    });
-    
-</script>
-
     <div id="footer"></div>
-    <div id="header"></div>
 </body>
-<script>
-    $(function () {
-  $("#header").load("../main/header.html");
-});
-
-$(function () {
-  $("#footer").load("../main/footer.html");
-});
-</script>
 </html>

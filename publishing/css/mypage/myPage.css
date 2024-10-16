@@ -4,16 +4,6 @@
   padding: 0;
 }
 
-/* 
-header{
-  width: 100%;
-  height: 95px;
-}
-
-footer{
-  width: 100%;
-  height: 150px;
-} */
 
 main{
   margin: 150px 300px 0px 300px;
@@ -64,7 +54,7 @@ main{
 
 .name-box{
   height: 50px;
-  font-size: 36px;
+  font-size: 28px;
   margin: 40px 0;
   font-weight: bold;
   width: 1320px;
@@ -233,6 +223,10 @@ main{
   color:black;
 }
 
+.list-nav div{
+  cursor: pointer;
+}
+
 .result-detail{
   display: flex;
   margin: 20px 0;
@@ -241,6 +235,27 @@ main{
   justify-content: space-between;
   font-size: 20px;
   color: black;
+}
+.result-detail2{
+  display: flex;
+  margin: 20px 0;
+  width: 1320px;
+  height: 25px;
+  justify-content: space-between;
+  font-size: 20px;
+  color: black;
+  display: none;
+}
+
+.result-detail3{
+  display: flex;
+  margin: 20px 0;
+  width: 1320px;
+  height: 25px;
+  justify-content: space-between;
+  font-size: 20px;
+  color: black;
+  display: none;
 }
 
 .result-detail a{
@@ -261,8 +276,12 @@ main{
   font-size: 20px;
 }
 
-.search-fp, .search-sp, .search-ftv{
+.search-fp, .search-sp, .search-tpl, .search-recent, .search-date{
   margin-right: 10px;
+}
+
+.search-fp, .search-sp, .search-tpl, .search-recent, .search-date{
+  cursor: pointer;
 }
 
 /*나의찜하기목록*/

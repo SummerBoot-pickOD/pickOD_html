@@ -5,42 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Management System</title>
-  <link rel="stylesheet" href="../../css/admin/admUserManagement.css">
+  <link rel="stylesheet" href="../../css/report/admReport.css">
   <link rel="stylesheet" href="../../css/admin/admHeader.css">
   <link rel="stylesheet" href="../../css/main/footer.css">
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-  <script defer src="../../js/admin/admUserManagement.js"></script>
+  <script defer src="../../js/report/admReport.js"></script>
 </head>
 
 <body>
   <div id="header"></div>
   <main>
-    <h1>회원관리</h1>
+    <h1>신고 관리</h1>
     <div class="container">
       <div class="search">
         <select id="condition">
           <option value="" disabled selected>조건을 선택하세요</option>
-          <option value="name">성명</option>
-          <option value="nick">닉네임</option>
-          <option value="sus">제재</option>
+          <option value="name">글 작성자</option>
+          <option value="nick">신고자</option>
+          <option value="sus">상세 내용</option>
         </select>
         <input type="text" placeholder="검색어를 입력하세요." />
         <!-- <label for="status">상태:</label> -->
-        <label><input type="radio" name="status" value="total" checked> 전체</label>
-        <label><input type="radio" name="status" value="normal" checked> 정상</label>
-        <label><input type="radio" name="status" value="suspended"> 제재</label>
-        <label><input type="radio" name="status" value="withdrawn"> 탈퇴</label>
         <button type="button" class="enter">검색</button>
       </div>
 
       <table>
         <tr class="table-head">
-          <th>아이디</th>
-          <th>성명</th>
-          <th>닉네임</th>
-          <th>여행 발자국</th>
-          <th>내 여행 짜기</th>
-          <th>제재 횟수</th>
+          <th>신고 사유</th>
+          <th>일시</th>
+          <th>글 작성자</th>
+          <th>신고자</th>
+          <th>상세 내용</th>
           <th>상세보기</th>
         </tr>
 
@@ -50,7 +45,6 @@
           <td>pickme1234</td>
           <td>3</td>
           <td>2</td>
-          <td>1</td>
           <td class="last-col"><button type="button">상세보기</button></td>
         </tr>
         <tr>
@@ -59,7 +53,6 @@
           <td>pickme1234</td>
           <td>3</td>
           <td>2</td>
-          <td>1</td>
           <td class="last-col"><button type="button">상세보기</button></td>
         </tr>
         <tr>
@@ -68,7 +61,6 @@
           <td>pickme1234</td>
           <td>3</td>
           <td>2</td>
-          <td>1</td>
           <td class="last-col"><button type="button">상세보기</button></td>
         </tr>
         <tr>
@@ -77,7 +69,6 @@
           <td>pickme1234</td>
           <td>3</td>
           <td>2</td>
-          <td>1</td>
           <td class="last-col"><button type="button" class="details">상세보기</button></td>
         </tr>
         <tr>
@@ -86,7 +77,6 @@
           <td>pickme1234</td>
           <td>3</td>
           <td>2</td>
-          <td>1</td>
           <td class="last-col"><button type="button">상세보기</button></td>
         </tr>
         <tr>
@@ -95,7 +85,6 @@
           <td>pickme1234</td>
           <td>3</td>
           <td>2</td>
-          <td>1</td>
           <td class="last-col"><button type="button">상세보기</button></td>
         </tr>
         <tr>
@@ -104,7 +93,6 @@
           <td>pickme1234</td>
           <td>3</td>
           <td>2</td>
-          <td>1</td>
           <td class="last-col"><button type="button">상세보기</button></td>
         </tr>
         <tr>
@@ -113,7 +101,6 @@
           <td>pickme1234</td>
           <td>3</td>
           <td>2</td>
-          <td>1</td>
           <td class="last-col"><button type="button">상세보기</button></td>
         </tr>
         <tr>
@@ -122,7 +109,6 @@
           <td>pickme1234</td>
           <td>3</td>
           <td>2</td>
-          <td>1</td>
           <td class="last-col"><button type="button">상세보기</button></td>
         </tr>
         <tr>
@@ -131,7 +117,6 @@
           <td>pickme1234</td>
           <td>3</td>
           <td>2</td>
-          <td>1</td>
           <td class="last-col"><button type=" button">상세보기</button></td>
         </tr>
         <!-- 맨 아래칸, 그냥 회색 섹션으로 만들고 싶음. -->
@@ -143,5 +128,6 @@
   </main>
   <div id='footer'></div>
 </body>
+<div id = "report-detail-modal"></div>
 
 </html>
