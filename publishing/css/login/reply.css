@@ -1,0 +1,50 @@
+*{
+  margin : 0;
+  padding:0;
+}
+.name-box{
+  font-size: 28px;
+  font-weight:bold;
+  border-bottom: 1px solid black;
+  margin-bottom: 40px;
+}
+#reply-write{
+  background-color: #d9d9d9;
+  padding: 10px 20px;
+  height : 100px;
+}
+#reply-write input{
+  width:100%;
+  height:60%;
+  margin-bottom: 5px;
+}
+#submit-reply{
+  display: flex;
+  justify-content: right;
+}
+#submit-reply button{
+  height:30px;
+  width:60px;
+  color: white;
+  background-color: #845AC6;
+  font-weight: bold;
+}
+#reply{
+  list-style:none;
+}
+
+.written{
+  display: flex;
+}
+.written>*{
+  border: 1px solid black;
+}
+.written .reply-image{
+  width: 10%;
+}
+.written .reply-content{
+  width: 80%;
+}
+.written .reply-buttons{
+  width: 10%;
+}
