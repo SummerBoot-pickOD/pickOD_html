@@ -6,7 +6,7 @@ $(function () {
   $("#footer").load("../../html/main/footer.html");
 });
 
-$(".last-col"+i).click(function(){
+$(".last-col").click(function(){
   if($(".modal-container").css('display') == 'flex'){
     if($("#report-detail-msg").css('display') == 'block'){
       $("#report-detail-msg").css('display','none');
