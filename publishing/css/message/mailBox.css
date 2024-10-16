@@ -23,7 +23,7 @@ color: black;
 .name-box{
   height: 50px;
   font-size: 28px;
-  margin: 40px 0;
+  margin: 110px 0 40px 0;
   display: flex;
   align-items: center;
   width: 1320px;
@@ -188,7 +188,7 @@ color: black;
   height: 410px;
   display: none;
   border:1px solid black;
-  /* position: absolute; */
+  /* position: absolute; 
 } */
 
 .nonmodal-container span{
