@@ -5,24 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Management System</title>
-  <link rel="stylesheet" href="../../css/report/admReport.css">
+  <link rel="stylesheet" href="../../css/admin/admReport.css">
   <link rel="stylesheet" href="../../css/admin/admHeader.css">
   <link rel="stylesheet" href="../../css/main/footer.css">
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-  <script defer src="../../js/report/admReport.js"></script>
+  <script defer src="../../js/admin/admReport.js"></script>
 </head>
 
 <body>
   <div id="header"></div>
   <main>
     <h1>신고 관리</h1>
-    <div class="container">
+    <div class="container" id = "reports">
       <div class="search">
         <select id="condition">
           <option value="" disabled selected>조건을 선택하세요</option>
-          <option value="name">글 작성자</option>
-          <option value="nick">신고자</option>
-          <option value="sus">상세 내용</option>
+          <option value="writer">글 작성자</option>
+          <option value="reporter">신고자</option>
+          <option value="detail">상세 내용</option>
         </select>
         <input type="text" placeholder="검색어를 입력하세요." />
         <!-- <label for="status">상태:</label> -->
@@ -125,9 +125,91 @@
         </tr>
       </table>
     </div>
+
+    <h1>사용자 제재하기</h1>
+    <div class="container" id = "sanction">
+      <div class="search">
+        <select id="condition">
+          <option value="" disabled selected>조건을 선택하세요</option>
+          <option value="name">아이디(이메일)</option>
+          <option value="nick">닉네임</option>
+        </select>
+        <input type="text" placeholder="정확히 입력해주세요." />
+        <!-- <label for="status">상태:</label> -->
+        <button type="button" class="enter" id = "search-sanction">검색</button>
+        <div id = sanction-count>제재횟수 : <span id="s-count"></span>회</div>
+        <select id="sanction-reason">
+          <option value="" disabled selected>제재 사유를 선택하세요</option>
+          <option value="1">상습적인 욕설 또는 비방</option>
+          <option value="2">괴롭힘, 폭력</option>
+          <option value="3">부적절한 글 작성</option>
+          <option value="N">기타(비고 작성)</option>
+        </select>
+        <input type="text" placeholder="비고 작성">
+        <button type="button" class="enter" id = "update-sanction">적용</button>
+      </div>
+    </div>
+
   </main>
   <div id='footer'></div>
 </body>
-<div id = "report-detail-modal"></div>
-
+<div class = modal-container>
+  <div id="report-detail-modal">
+    <section id="report-modal-top">
+      <span>신고 상세보기</span><span id="modal-exit">&times;</span>
+    </section>
+    <section id="report-modal-mid">
+      <div>신고글 분류 : <span id="write-type"></span></div>
+      <div>
+        <input type="radio" name="report-type" disabled>&nbsp;욕설 또는 타인 비방
+      </div>
+      <div>
+        <input type="radio" name="report-type" disabled>&nbsp;희롱, 괴롭힘 또는 노골적인 폭력
+      </div>
+      <div>
+        <input type="radio" name="report-type" disabled>&nbsp;저작권 위반
+      </div>
+      <div>
+        <input type="radio" name="report-type" disabled>&nbsp;기타
+      </div>
+      <div>
+        <input type="radio" name="report-type" disabled>&nbsp;정보 오류
+      </div>
+      <textarea id="report-detail-text" placeholder="자세한 상황을 설명해주세요." disabled></textarea>
+    </section>
+    <section id="report-modal-tail">
+      <button type="button" id="show-write">작성글 바로가기</button>
+    </section>
+  </div>
+  <div id="report-detail-msg">
+    <section id="report-modal-top">
+      <span>신고 쪽지 내용</span>
+    </section>
+    <section id="report-modal-mid">
+      <textarea id="report-msg-text" placeholder="쪽지 내용 들어갈거임." disabled></textarea>
+    </section>
+  </div>
+</div>
 </html>
+
+<div class="nonmodal-container getmsg-container">
+  <div class="nonmodal-box">
+    <div class="nonmodal-top">
+      <div class="detail-from">
+        <span>From.</span>
+        <span>신현식</span>
+      </div>
+      <div class="btn-close">&times;</div>
+    </div>
+    <div class="nonmodal-textarea">
+      어쩌구저쩌구
+    </div>
+    <div class="nonmodal-bottom">
+      <div class="report-box"><img src="../../img/message/report.png" alt="신고하기"></div>
+      <div class="btn-replydelete">
+        <div class="delete-msg">삭제</div>
+        <div class="reply-msg">답장</div>
+      </div>
+    </div>
+  </div>
+</div>
