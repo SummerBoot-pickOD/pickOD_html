@@ -6,6 +6,7 @@ $(function () {
   $(function () {
   $("#footer").load("../main/footer.html");
   });
+
 // 전체클릭 기능
 let checkAll = document.querySelector('.all');
 let checkItem = document.querySelectorAll('.item');
@@ -62,14 +63,44 @@ btnDelete.addEventListener('click', function() {
   });
 });
 
-//쪽지클릭시 쪽지내용보기
-let mailContent = document.querySelectorAll('.mail-content');
-mailContent.forEach(btn => {
-  btn.addEventListener("click", function(){
-    let getMsgContainer = document.querySelector('.getmsg-container');
-    getMsgContainer.style.display="block";
-  })
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // 모든 mailbox-list 요소들을 가져오기
+  var mailboxLists = document.querySelectorAll('.mailbox-list');
+
+  // 각 mailbox-list 요소에 클릭 이벤트 추가
+  mailboxLists.forEach(function(mailbox) {
+    mailbox.addEventListener('click', function() {
+
+      // 읽으면 편지 읽음표시기능
+      var readMail =this.querySelector('.mail-open img');
+      readMail.src = '../../img/message/받은편지.png';
+      // 클릭한 mailbox-list 안의 mail-from 텍스트 가져오기
+      var senderText = this.querySelector('.mail-from').innerText;
+      // 클릭한 mailbox-list 안의 mail-content 텍스트 가져오기
+      var contentText = this.querySelector('.mail-content').innerText;
+
+      // 모달의 ppl-from 요소에 발신자 텍스트 설정
+      document.querySelector('.ppl-from').innerText = senderText;
+      // 모달의 nonmodal-textarea에 쪽지 내용 텍스트 설정
+      document.querySelector('.nonmodal-textarea').innerText = contentText;
+
+      // 모달 보이기
+      document.querySelector('.getmsg-container').style.display = 'block';
+    });
+  });
+
+  // // 모달 닫기 버튼 클릭 시 모달 숨기기 -> 따로 빼서만듦
+  // document.querySelector('.btn-close').addEventListener('click', function() {
+  //   document.querySelector('.getmsg-container').style.display = 'none';
+  // });
 });
+
 
 let replyMsg = document.querySelector('.reply-msg');
 replyMsg.addEventListener("click", function(){
@@ -78,26 +109,60 @@ replyMsg.addEventListener("click", function(){
   });
 
 
-//쪽지 닫기 기능
-// let btnClose = document.querySelector('.btn-close');
-// console.log(btnClose);
-
-// btnClose.addEventListener("click", function(){
-//   const closeItem = btnClose.closest('.nonmodal-container');
-//   // let nonmodalContainer = document.querySelector('.nonmodal-container');
-//   // console.log(nonmodalContainer);
-//   closeItem.style.display = 'none';
-// })
-// 아 이건 하나만제거되고;;
-// 아래건 전부제거가되네........난감하다
+// 쪽지닫기기능
 let btnClose = document.querySelectorAll('.btn-close');
 btnClose.forEach(btn => {
   btn.addEventListener("click", function() {
-    let nonmodalContainers = document.querySelectorAll('.nonmodal-container');
+    let nonmodalContainers = this.closest('.nonmodal-container');
     
-    nonmodalContainers.forEach(container => {
-      container.style.display = 'none';
-    });
+    if(nonmodalContainers){
+      nonmodalContainers.style.display='none';
+    }
   });
 });
+
+// 게시물 및 페이지네이션 처리
+const mailNum = Array.from({ length: 50 });
+const MailsPerPage = 10;
+let currentPage = 1;
+let totalPages;
+
+function setupPagination() {
+  const paginationContainer = document.getElementById('pagination');
+  paginationContainer.innerHTML = '';
+
+  totalPages = Math.ceil(mailNum.length / MailsPerPage);
+
+  const createButton = (pageNum, text) => {
+      const button = document.createElement('button');
+      button.textContent = text;
+      button.disabled = (currentPage === pageNum);
+      button.addEventListener('click', () => {
+          currentPage = pageNum;
+          setupPagination();
+      });
+      return button;
+  };
+
+  if (currentPage > 1) {
+      const prevButton = createButton(Math.max(currentPage - 5, 1), '<'); // 1 이하로 내려가지 않도록 수정
+      paginationContainer.appendChild(prevButton);
+  }
+
+  const startPage = Math.max(1, currentPage - 4);
+  const endPage = Math.min(totalPages, currentPage + 4);
+
+  for (let i = startPage; i <= endPage; i++) {
+      const button = createButton(i, i);
+      paginationContainer.appendChild(button);
+  }
+
+  if (currentPage < totalPages) {
+      const nextButton = createButton(Math.min(currentPage + 5, totalPages), '>'); // 총 페이지 수 초과 방지
+      paginationContainer.appendChild(nextButton);
+  }
+}
+
+  // 초기 표시
+  setupPagination();
 

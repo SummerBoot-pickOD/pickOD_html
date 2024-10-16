@@ -331,6 +331,7 @@ main{
   height: 80px;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .checklist-content{

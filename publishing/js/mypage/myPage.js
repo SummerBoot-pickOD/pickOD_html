@@ -102,3 +102,15 @@ searchDate.addEventListener('click', ()=>{
   
   // db연결하면 검색기능 들어감
 });
+
+// 찜하기 해제하면 리스트삭제
+
+document.querySelectorAll('.checklist-check').forEach(function(checkElement) {
+  checkElement.addEventListener('click', function() {
+    // 클릭된 요소의 부모의 부모(.check-list)를 찾고 제거
+    const checkListElement = this.closest('.check-list');
+    if (checkListElement) {
+      checkListElement.remove();
+    }
+  });
+});
