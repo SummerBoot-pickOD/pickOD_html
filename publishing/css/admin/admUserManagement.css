@@ -24,7 +24,26 @@ h1 {
   align-items: center;
 }
 
-.enter {
+select {
+  padding: 5px;
+  margin-left: 10px;
+  border: solid 1px #e0dfdf;
+}
+
+
+input[type="text"] {
+  padding: 5px;
+  padding-right: 70px;
+  margin: 6px 30px 6px 6px;
+  border: solid 1px #e0dfdf;
+}
+
+label {
+  margin: 8px;
+  justify-content: center;
+}
+
+.search-button {
   padding: 4px 20px;
   background-color: #A1A1A1;
   color: white;
@@ -34,26 +53,8 @@ h1 {
   margin-left: 15px;
 }
 
-label {
-  margin: 8px;
-  justify-content: center;
-}
 
-input[type="text"] {
-  padding: 5px;
-  padding-right: 70px;
-  margin: 6px 30px 6px 6px;
-  border: solid 1px #e0dfdf;
-}
-
-
-select {
-  padding: 5px;
-  margin-left: 10px;
-  border: solid 1px #e0dfdf;
-}
-
-button {
+.user-detail {
   padding: 3px 5px;
   background-color: #A1A1A1;
   color: white;
@@ -96,4 +97,88 @@ td {
   background-color: #FAFAFA;
   border: none;
   padding: 15px;
+}
+
+/* 여기부터 회원 상세 정보 모달 */
+/* 모달 위치 조정 어떻게 하지..? */
+.nonmodal-container {
+  display: none;
+  position: relative;
+  width: 50%;
+  margin: 50px auto;
+  border-radius: 10px;
+  border: 1px solid #E9E9E9;
+  padding: 10px 30px;
+}
+
+.nonmodal-content {
+  display: flex;
+  flex-direction: column;
+  /* 이거 없으면 안에 표가 그 컨테이너 만큼 안커짐 */
+  width: 100%;
+  top: 50%;
+}
+
+.close-btn {
+  font-size: 25px;
+  padding-left: 99%;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-size: 20px;
+}
+
+.user-info {
+  width: 100%;
+  margin-top: 2%;
+  border-collapse: collapse;
+}
+
+.user-info th {
+  padding: 5px 0px;
+  border-bottom: 1px solid #E9E9E9;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.user-info td {
+  padding: 5px 10px;
+  border-bottom: 1px solid #E9E9E9;
+  text-align: center;
+}
+
+
+.buttons-container {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.message,
+.withdrawal,
+.suspend {
+  padding: 5px 10px;
+  margin: 15px;
+  border: none;
+  background-color: #A1A1A1;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mypage-container {
+  display: flex;
+  justify-content: center;
+}
+
+.mypage {
+  margin: 0px 15px 15px 15px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #A1A1A1;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
