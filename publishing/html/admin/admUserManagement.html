@@ -144,7 +144,9 @@
         <!-- user detail non-modal -->
         <div class="nonmodal-container">
           <div class="nonmodal-content">
-            <span class="close-btn">&times;</span>
+            <div class="close">
+              <span class="close-btn">&times;</span>
+            </div>
             <h2 class="modal-title">회원 상세 정보</h2>
             <table class="user-info">
               <tr>
@@ -216,20 +218,54 @@
               <div class="buttons">
                 <button class="suspend" type="button">제재 부여</button>
                 <a href="#">
-                  <!-- 쪽지 보내기 모달 어떻게 끌어오지? -->
+                  <!-- 쪽지 보내기 모달로 링크됨 -->
                   <button class="message" type="button">쪽지 보내기</button>
                 </a>
                 <!-- 회원 탈퇴 로직 구상-->
                 <button class="withdrawal" type="button">회원 탈퇴</button>
               </div>
             </div>
-            <div class="mypage-container">
-              <!-- 이거는 지울 수도 있음 -->
+            <!-- <div class="mypage-container">
               <a href="#">
                 <button class="mypage" type="button">마이페이지</button>
               </a>
+            </div> -->
+          </div>
+      </form>
+    </section>
+
+    <!-- 쪽지 보내기 모달 -->
+    <section>
+      <form action="#" method="">
+        <!-- <div class="nonmodal-container">
+          <div class="nonmodal-content">
+
+            <h2 class="modal-title">회원 상세 정보</h2>
+ -->
+
+        <div class="sendmsg-container">
+          <div class="sendmsg-content">
+            <div class="close">
+              <span class="message-close">&times;</span>
+            </div>
+            <h2 class="modal-title">쪽지 보내기</h2>
+            <div class="nonmodal-top">
+              <div class="detail-to">
+                <span>To.</span>
+                <span class="recipient"></span>
+              </div>
+            </div>
+            <!-- <div class="nonmodal-textarea"> -->
+
+            <textarea id="textarea" placeholder="쪽지를입력하세요"></textarea>
+
+            <!-- </div> -->
+            <div class="nonmodal-bottom">
+              <button class="send-msg" type="submit">쪽지 보내기</button>
             </div>
           </div>
+        </div>
+        </div>
       </form>
     </section>
   </main>

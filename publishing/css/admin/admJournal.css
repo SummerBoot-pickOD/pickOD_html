@@ -94,6 +94,19 @@ td {
   white-space: nowrap;
   text-overflow: ellipsis;
   padding: 0px 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.jnl-title.expanded {
+  white-space: nowrap;
+  position: fixed;
+  overflow: visible;
+  z-index: 1;
+  max-width: none;
+  background-color: white;
+  border: none;
+  padding-top: 7px;
 }
 
 .last-row {

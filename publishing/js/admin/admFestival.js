@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // 행사 리스트업
   const total_btn = document.querySelector('.total_area_btn');
   const area_btn = document.querySelectorAll('.tag_area li button');
   const area_btn_seoul = document.querySelectorAll('.tag_area_seoul button');

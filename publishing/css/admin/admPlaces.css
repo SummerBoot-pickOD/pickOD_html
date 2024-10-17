@@ -24,7 +24,7 @@ main {
   align-items: center;
 }
 
-.enter {
+.search-button {
   padding: 4px 20px;
   background-color: #A1A1A1;
   color: white;
@@ -97,12 +97,29 @@ td {
   padding: 0px 5px;
 }
 
-.last-col {
-  border-right: none;
-}
-
 .last-row {
   background-color: #FAFAFA;
   border: none;
   padding: 15px;
+}
+
+.address {
+  max-width: 180px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0px 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.address.expanded {
+  white-space: nowrap;
+  position: fixed;
+  overflow: visible;
+  z-index: 1;
+  max-width: none;
+  background-color: white;
+  border: none;
+  padding-top: 7px;
 }
