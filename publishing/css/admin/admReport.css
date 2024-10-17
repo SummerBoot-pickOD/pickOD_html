@@ -5,6 +5,7 @@
 
 main {
   margin: 0px 300px;
+  min-width: 1300px;
 }
 
 h1 {
@@ -102,6 +103,9 @@ td {
   width:110px;
   margin:0 40px 0 20px;
 }
+#sanction-reason{
+  margin-left:auto;
+}
 
 .modal-container{
   display: none;
@@ -116,7 +120,9 @@ td {
 
 .modal-container>*{
   display:none;
-  width:480px;
+  width:20%;
+  min-width:400px;
+  height:500px;
   border: 1px solid #d9d9d9;
   background-color: white;
 }
@@ -127,7 +133,7 @@ td {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height:50px;
+  height:10%;
   font-size:36px;
   font-weight: 600;
 }
@@ -149,7 +155,7 @@ td {
 
 #report-detail-text{
   margin-top: 30px;
-  height:150px;
+  height:100px;
   resize: none;
 }
 
