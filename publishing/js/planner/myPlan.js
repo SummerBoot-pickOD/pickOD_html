@@ -298,12 +298,13 @@ const btnCancle = document.querySelector('.cancel-btn');
 btnSave.addEventListener('click', function () {
     // Confirm 창을 띄우고, 확인 시 true, 취소 시 false 반환
 
-  if (uconfirm('저장하시겠습니까?')) {
+  if (confirm('저장하시겠습니까?')) {
     // 확인 버튼을 누르면 mypage.html로 이동
     window.location.href = '../mypage/mypage.html';
   } 
   // 취소 버튼을 누르면 아무 일도 일어나지 않음 (아무 코드도 실행되지 않음)
 });
+
 console.log(window.location.href);
 btnCancle.addEventListener('click', function () {
 
