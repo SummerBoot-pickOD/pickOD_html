@@ -174,13 +174,15 @@ img{
 }
 
 .Day-container{
-    margin: -65px 0;
+    display: flex;
+    margin: 0 10px -65px 0;
 }
 
 .Day-container button{
     border: none;
     font-size: 20px;
     cursor: pointer;
+    position: relative;
 
 }
 
@@ -192,13 +194,23 @@ img{
 
 .Day-button{
     background-color: #FEF2F2;
-    width: 70px;
+    width: 80px;
     height: 40px;
     border-radius: 10px;
     margin-right: 10px;
 }
 
-
+.Day-button .close-button {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+}
 
 .create-container{ 
     margin: 60px 0;   
@@ -221,14 +233,9 @@ img{
 .add-location{
     width: 100%;
     margin-top: 30px;
-
+    position: relative;
 }
 
-.location-wrapper {
-    display: flex; /* 수평 정렬을 위해 flex 사용 */
-    align-items: center; /* 수직 정렬을 위해 추가 */
-    margin-top: 10px; /* 각 입력 박스 간의 간격 */
-}
 
 .add-location-text{
     width: 15%;
@@ -240,13 +247,14 @@ img{
     outline: 1px solid #ccc;
 }
 
-.remove-location-button {
+.add-location-button,
+.close-button {
+    position: relative;
+    margin-left: 5px;
     background-color: transparent;
     border: none;
-    cursor: pointer;
     font-size: 20px;
-    color: bl; /* X 버튼 색상 */
-    margin-left: 10px; /* 버튼 간의 간격 */
+    cursor: pointer;
 }
 
 .add-location-button{
@@ -256,6 +264,19 @@ img{
     outline: none;
     font-size: 30px;
     cursor: pointer;
+}
+
+.close-button {
+    font-size: 20px;
+    margin-left: -25px;
+    margin-right: 10px;
+    color: black;
+}
+
+.close-button {
+    position: relative; /* 상대 위치 지정 */
+    top: -10px; /* 위로 10px 이동 */
+    margin-left: -25px; /* 텍스트 박스와의 간격 조정 */
 }
 
 .summernote-container{
@@ -284,3 +305,4 @@ img{
     font-weight: bold;
     border: none;
 }
+
