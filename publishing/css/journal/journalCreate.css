@@ -1,4 +1,4 @@
-body{
+main{
     margin: 176px 300px;
     
 }
@@ -111,7 +111,9 @@ img{
     color: black;
 }
 
-
+.date-picker input:hover {
+    cursor: pointer;
+}
 
 .date-picker input {
     width: 100%;

@@ -5,6 +5,20 @@ $(function () {
     $("#footer").load("../main/footer.html");
 });
 
+$(function() {
+    // 시작일과 종료일에 달력 기능 적용
+    $("#start-date").datepicker({
+        dateFormat: "yy-mm-dd", // 원하는 날짜 형식
+        changeMonth: true,
+        changeYear: true
+    });
+    $("#end-date").datepicker({
+        dateFormat: "yy-mm-dd", // 원하는 날짜 형식
+        changeMonth: true,
+        changeYear: true
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     // saveimg 클래스를 가진 이미지를 선택
     const saveImage = document.querySelector('.saveimg');

@@ -1,10 +1,18 @@
 $(function () {
-    $("#header").load("../main/header.html", function() {
-        bindButtonClicks(); // 헤더 로드 후 클릭 이벤트 바인딩
+    $("#header").load("../main/header.html");
     });
-    $("#footer").load("../main/footer.html");
-});
 
+    $(function () {
+    $("#footer").load("../main/footer.html");
+    });
+
+    $(function () {
+        $("#reply").load("../main/header.html", function(response, status, xhr) {
+            if (status == "error") {
+                console.log("Error: " + xhr.status + " - " + xhr.statusText);
+            }
+        });
+    });
 document.addEventListener('DOMContentLoaded', function() {
     // saveimg 클래스를 가진 이미지를 선택
     const saveImage = document.querySelector('.saveimg');
