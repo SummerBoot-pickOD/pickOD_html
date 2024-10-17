@@ -5,8 +5,11 @@
 }
 
 
-main{
-  margin: 150px 300px 0px 300px;
+main {
+  margin: 110px auto 0;
+  padding: 0 20px;
+  max-width: 1320px; /* 페이지의 최대 너비를 설정 */
+  width: 100%;
 }
 
 
@@ -291,7 +294,7 @@ main{
   display: grid;
   /* display: none; */
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto;
   place-items: center;
 }
 
@@ -357,7 +360,7 @@ main{
   /* display: grid; */
   display: none;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto;
   place-items: center;
 }
 
@@ -413,7 +416,7 @@ main{
   /* display: grid; */
   display: none;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: auto;
   place-items: center;
 }
 
