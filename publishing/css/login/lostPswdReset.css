@@ -54,9 +54,9 @@ h2 {
 .input-pswd{
   margin : 10px auto;
   width:400px;
-  height:27px;
+  height:28px;
   border : 0;
-  border-bottom: 3px solid #FEF2F2;
+  border-bottom: 2px solid #845AC6;
   padding : 10px 0 10px 0;
 }
 

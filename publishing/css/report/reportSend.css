@@ -18,8 +18,11 @@
     background-color: rgba(0,0,0,0.1);
 }
 #report-modal{
-    width:480px;
-    height:600px;
+    width:20%;
+    min-width:400px;
+    height:40%;
+    min-height: 400px;;
+    max-height: 450px;
     position:absolute;
     top: 50%;
     left: 50%;
@@ -33,7 +36,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height:50px;
+    height:10%;
     font-size:36px;
     font-weight: 600;
 }
@@ -42,6 +45,7 @@
 }
 #report-modal-mid{
     width:75%;
+    height:40%;
     margin:20px auto;
     display: flex;
     flex-direction: column;
@@ -53,7 +57,7 @@
 
 #report-detail-text{
     margin-top: 30px;
-    height:150px;
+    height:100px;
     resize: none;
 }
 
