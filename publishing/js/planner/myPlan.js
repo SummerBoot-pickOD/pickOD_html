@@ -291,3 +291,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+const btnSave = document.querySelector('.save-btn');
+const btnCancle = document.querySelector('.cancel-btn');
+
+
+btnSave.addEventListener('click', function () {
+    // Confirm 창을 띄우고, 확인 시 true, 취소 시 false 반환
+
+  if (uconfirm('저장하시겠습니까?')) {
+    // 확인 버튼을 누르면 mypage.html로 이동
+    window.location.href = '../mypage/mypage.html';
+  } 
+  // 취소 버튼을 누르면 아무 일도 일어나지 않음 (아무 코드도 실행되지 않음)
+});
+console.log(window.location.href);
+btnCancle.addEventListener('click', function () {
+
+  if (confirm('정말 취소하시겠습니까?')) {
+    // 확인 버튼을 누르면 main.html로 이동
+    window.location.href = '../main/main.html';
+    // 현재 페이지의 URL 정보를 관리하는 객체로 접근해서 mainhtml로접근
+  } 
+  // 취소 버튼을 누르면 아무 일도 일어나지 않음 (아무 코드도 실행되지 않음)
+});
