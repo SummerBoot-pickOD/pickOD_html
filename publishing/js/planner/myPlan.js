@@ -155,6 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const memoBox = document.createElement('div');
       memoBox.classList.add('memo-space');
       memoBox.style.display = 'flex'; // .memo-space의 display를 'flex'로 설정
+      console.log(memoBox.style.display); //이부분이 안되네
 
       // Create space-area inside memo-space
       const spaceArea = document.createElement('div');

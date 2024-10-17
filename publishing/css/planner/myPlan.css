@@ -121,6 +121,7 @@ main {
 .order-num{
   background-color: #9E72E4;
 }
+
 .space-area{
   background-color: lightcoral;
 }
@@ -163,6 +164,7 @@ main {
   color: #6A6363;
   cursor: pointer;
 }
+
 /* 장소추가모달 */
 .addspot-container {
   display: none;
