@@ -9,11 +9,6 @@ a:visited {
   text-decoration: none;
 }
 
-body {
-  font-family: Arial, sans-serif;
-
-}
-
 main {
   margin: 110px 720px;
   display: flex;
