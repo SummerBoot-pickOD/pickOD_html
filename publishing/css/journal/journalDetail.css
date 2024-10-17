@@ -10,43 +10,35 @@ body{
     font-size: 40px;
 }
 
-.pick-report-container{
-    width: 98%;
-    height: 100px;
+.placeIcon{
     display: flex;
     justify-content: flex-end;
-}
+    align-items: center;
+    margin-top: 40px;
 
-.pick{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    width: 10px;
-    height: 10px;
-    margin-top: 50px;
-}
-
-.pick img{
-    width: 40px;
-    height: 40px;
-    padding-right: 50px;
-    margin: 0 -100px;
-}
-
-.report{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    width: 20px;
+  }
+  
+  .count-wrap{
+    display: flex;
+  }
+  
+  .countimg{
+    width: 25px;
     height: 20px;
-    margin-top: 54px;
-}
-
-.report img{
+    margin-right: 3px;
+  }
+  
+  .reportimg{
+    width: 20px;
+    height: 23px;
+    margin-bottom: 5px;
+    margin-right: 3px;
+  }
+  .saveimg{
     width: 30px;
     height: 30px;
-    margin: 0;
-}
+    cursor: pointer;
+  }
 
 .container-display {
     margin: 0 0 150px 0;
@@ -94,8 +86,8 @@ body{
     border: none; /* 기본 테두리 제거 */
     cursor: pointer; /* 커서 변경 */
     position: absolute; /* 절대 위치 설정 */
-    top: 15px; /* 상단에 위치 */
-    right: -15px; /* 오른쪽에 위치 */
+    top: 8px; /* 상단에 위치 */
+    right: -8px; /* 오른쪽에 위치 */
 }
 
 .message-button img {
@@ -103,6 +95,9 @@ body{
     height: 25px; /* 버튼 이미지 높이 */
 }
 
+.nonmodal-container {
+    display: none; /* 기본적으로 숨김 */
+}
 
 .explain-container{
     width: 324px;

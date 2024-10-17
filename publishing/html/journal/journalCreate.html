@@ -11,6 +11,7 @@
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
     <script src="../../js/journal/journalCreate.js"></script>
 </head>
 <body>
@@ -107,8 +108,10 @@
         <div class="create-box">
             <div class="maps-API">지도입니당</div>
             <div class="add-location">
-                <input class="add-location-text" type="text" placeholder="장소를 입력해주세요."onfocus="this.placeholder=''" onblur="this.placeholder='장소를 입력해주세요.'">
-                <button class="add-location-button" type="button">+</button>
+                <div class="location-wrapper">
+                    <input class="add-location-text" type="text" placeholder="장소를 입력해주세요." onfocus="this.placeholder=''" onblur="this.placeholder='장소를 입력해주세요.'">
+                    <button class="add-location-button" type="button">+</button>
+                </div>
             </div>
             <div class="summernote-container">
                 <div class="summernote">썸머노트 적용</div>
