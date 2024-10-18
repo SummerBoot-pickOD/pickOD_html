@@ -8,27 +8,28 @@ $(function () {
   });
 
 
-  const btnSave = document.querySelector('.save-btn');
-  const btnCancle = document.querySelector('.cancel-btn');
+  const btnSave = document.querySelector('.fix-btn');
+  const btnCancle = document.querySelector('.delete-btn');
+
+
+
+  btnCancle.addEventListener('click', function () {
+
+    if (confirm('삭제하시겠습니까?')) {
+  
+      window.location.href = '../mypage/myPage.html';
+    }
+  
+  });
 
   btnSave.addEventListener('click', function () {
 
     if (confirm('편집하시겠습니까?')) {
   
-      window.location.href = '../myplan/myplan.html';
+      window.location.href = '../planner/myPlan.html';
     } 
   
   });
-  
-   
 
-  btnCancle.addEventListener('click', function () {
-
-  if (confirm('삭제하시겠습니까?')) {
-
-    window.location.href = '../mypage/mypage.html';
-  } 
-
-});
 
  
