@@ -15,7 +15,7 @@ $("#submit-reply").click(function(){
         <div class="reply-content">
           <div class = "content">`+text+`</div>
           <div class = "user"><span id = "nick">김카디</span>&nbsp;&nbsp;<span id = "date">24.10.16</span></div>
-          <div class = "likes"><img src="../../img/journal/footprint.png" alt="좋아요"><span>35</span></div>
+          <div class = "likes"><img src="../../img/main/Heart.png" alt="좋아요"><span>35</span></div>
         </div>
         <div class="reply-buttons">
           <img src="../../img/message/쪽지함휴지통.png" alt="삭제">
@@ -29,8 +29,8 @@ $("#submit-reply").click(function(){
 
 
 // 좋아요 누르면 등록 + 숫자 하나 올라감
-picked = "../../img/journal/footprint_pick.png"
-Npicked = "../../img/journal/footprint.png"
+picked = "../../img/main/Heart_picked.png"
+Npicked = "../../img/main/Heart.png"
 $("#reply").on('click', ".likes img[alt='좋아요']",function(){
   //좋아요가 여러개이기 때문에, $(this)로 클릭당한 자신을 기준으로 해야 됨
   now = $(this).attr('src');
