@@ -145,7 +145,7 @@ main {
   
 }
 
-.cancel-btn, .save-btn{
+.delete-btn, .fix-btn{
   font-size: 28px;
   background-color: #845AC6;
   color: white;
