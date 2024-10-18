@@ -43,7 +43,7 @@ label {
 input[type="text"] {
   padding: 5px;
   padding-right: 70px;
-  margin: 6px 30px 6px 6px;
+  margin: 6px 6px 6px 6px;
   border: solid 1px #e0dfdf;
 }
 
@@ -120,6 +120,7 @@ td {
 
 .modal-container>*{
   display:none;
+  padding : 10px 30px;
   width:20%;
   min-width:400px;
   height:500px;
@@ -127,55 +128,70 @@ td {
   background-color: white;
 }
 
-#report-modal-top{
-  padding:28px;
-  background-color: #d9d9d9;
-  display: flex;
+.report-modal-top{
   justify-content: space-between;
   align-items: center;
-  height:10%;
-  font-size:36px;
+  height:10%-33px;
+  font-size:20px;
   font-weight: 600;
+}
+#report-detail-msg>.report-modal-top{
+  margin-top:33px;
 }
 
 #modal-exit{
+  text-align: right;
+}
+#modal-exit>#exit-button{
+  font-size: 25px;
   cursor:pointer;
 }
 
-#report-modal-mid{
-  width:75%;
-  margin:20px auto;
-  display: flex;
-  flex-direction: column;
+.user-info {
+  width: 100%;
+  margin-top: 11px;
+  border-collapse: collapse;
 }
 
-#report-modal-mid>div{
-  margin: 10px 0;
+.user-info th {
+  padding: 5px 0px;
+  border-bottom: 1px solid #E9E9E9;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.user-info td {
+  padding: 5px 10px;
+  border-bottom: 1px solid #E9E9E9;
+  text-align: center;
 }
 
 #report-detail-text{
-  margin-top: 30px;
-  height:100px;
+  margin-top: 10px;
+  width:100%;
+  height:150px;
   resize: none;
 }
 
 #report-modal-tail{
-  margin: 28px auto 0 auto;
-  width:30%;
+  display: flex;
+  justify-content: space-around;
+  margin: 15px auto 0 auto;
+  width:100%;
 }
 
 #report-modal-tail>button{
-padding : 5px 10px;
-width:100%;
-border: 0;
-color: black;
-background-color: #d9d9d9;
-border-radius: 20px;
-cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  background-color: #A1A1A1;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #report-msg-text{
-  margin-top: 30px;
-  height:300px;
+  margin-top: 11px;
+  width:100%;
+  height:353px;
   resize: none;
 }
