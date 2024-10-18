@@ -7,11 +7,15 @@ $(function () {
 $("#footer").load("../main/footer.html");
 });
 
+// 보낸편지모달기능
+$(function () {
+  $("#sentmailModal").load("../message/sentmailModal.html");
+});
+
 // 전체클릭 기능
 let checkAll = document.querySelector('.all');
 let checkItem = document.querySelectorAll('.item');
-// console.log(checkAll);
-// console.log(checkItem);
+
 
 checkAll.addEventListener('click', function() {
   checkItem.forEach(function(e) {
@@ -39,19 +43,10 @@ const mailboxList = document.querySelectorAll('.mailbox-list');
 console.log(mailboxList);
 
 btnDelete.addEventListener('click', function() {
-  // const mailboxList = document.querySelector('mailbox-list');
-  // console.log(mailboxList);
-  // const trashList = document.getElementById('trashList');
-  
-  // 받은 쪽지 중 체크된 항목을 찾아서 휴지통으로 이동
   const checkboxes = document.querySelectorAll('.item');
   console.log(checkboxes);
   checkboxes.forEach((checkbox, index) => {
       if (checkbox.checked) {
-          // const messageItem = checkbox.parentElement;
-          // console.log(messageItem);
-          // const msgDelList= messageItem.parentElement;
-          // console.log(msgDelList);
           const messageItem = checkbox.closest('.mailbox-list');
           console.log(messageItem);
           messageItem.remove();
@@ -90,14 +85,14 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelector('.nonmodal-textarea').innerText = contentText;
 
       // 모달 보이기
-      document.querySelector('.getmsg-container').style.display = 'block';
+      document.querySelector('.sentmsg-container').style.display = 'block';
     });
   });
 
   // 모달 닫기 버튼 클릭 시 모달 숨기기 
-  document.querySelector('.btn-close').addEventListener('click', function() {
-    document.querySelector('.getmsg-container').style.display = 'none';
-  });
+  // document.querySelector('.btn-close').addEventListener('click', function() {
+  //   document.querySelector('.sentmsg-container').style.display = 'none';
+  // });
 });
 
 

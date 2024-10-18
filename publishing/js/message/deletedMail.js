@@ -6,6 +6,14 @@ $("#header").load("../main/header.html");
 $(function () {
 $("#footer").load("../main/footer.html");
 });
+//신고하기
+$(function () {
+  $("#report").load("../report/reportSend.html");
+});
+
+$(".reportimg").click(function(){
+  $(".modal-container").css("display","block");
+});
 
 // 전체 체크기능
 let checkAll = document.querySelector('.all');
@@ -183,8 +191,10 @@ function setupPagination() {
   }
 };
 
-
   document.addEventListener('DOMContentLoaded', function() {
     setupPagination();
     displayMails();
   });
+
+  
+

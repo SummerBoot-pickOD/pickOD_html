@@ -7,6 +7,26 @@ $(function () {
   $("#footer").load("../main/footer.html");
   });
 
+// 신고기능
+
+$(function () {
+  $("#report").load("../report/reportSend.html");
+});
+
+$(".reportimg").click(function(){
+  $(".modal-container").css("display","block");
+});
+
+// 받은편지모달기능
+$(function () {
+  $("#getmailModal").load("../message/getmailModal.html");
+});
+// 답장편지모달기능
+$(function () {
+  $("#replymailModal").load("../message/replymailModal.html");
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
   // 페이지네이션 설정 전에 currentPage를 1로 설정
   currentPage = 1;
@@ -18,8 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // 전체클릭 기능
 let checkAll = document.querySelector('.all');
 let checkItem = document.querySelectorAll('.item');
-// console.log(checkAll);
-// console.log(checkItem);
 
 checkAll.addEventListener('click', function() {
   checkItem.forEach(function(e) {
@@ -47,19 +65,14 @@ const mailboxList = document.querySelectorAll('.mailbox-list');
 console.log(mailboxList);
 
 btnDelete.addEventListener('click', function() {
-  // const mailboxList = document.querySelector('mailbox-list');
-  // console.log(mailboxList);
-  // const trashList = document.getElementById('trashList');
+
   
   // 받은 쪽지 중 체크된 항목을 찾아서 휴지통으로 이동
   const checkboxes = document.querySelectorAll('.item');
   console.log(checkboxes);
   checkboxes.forEach((checkbox, index) => {
       if (checkbox.checked) {
-          // const messageItem = checkbox.parentElement;
-          // console.log(messageItem);
-          // const msgDelList= messageItem.parentElement;
-          // console.log(msgDelList);
+
           const messageItem = checkbox.closest('.mailbox-list');
           console.log(messageItem);
           messageItem.remove();
@@ -102,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // 답장기능
       let replyMsg = document.querySelector('.reply-msg');
       replyMsg.addEventListener("click", function(){
-      let sendMsgContainer = document.querySelector('.sendmsg-container');
+      let sendMsgContainer = document.querySelector('.replymsg-container');
       sendMsgContainer.style.display="block";
 
       document.querySelector('.ppl-to').innerText = senderText;
@@ -110,29 +123,23 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
-
-
-
   // // 모달 닫기 버튼 클릭 시 모달 숨기기 -> 따로 빼서만듦
   // document.querySelector('.btn-close').addEventListener('click', function() {
   //   document.querySelector('.getmsg-container').style.display = 'none';
   // });
 });
 
-
-
-
 // 쪽지닫기기능
-let btnClose = document.querySelectorAll('.btn-close');
-btnClose.forEach(btn => {
-  btn.addEventListener("click", function() {
-    let nonmodalContainers = this.closest('.nonmodal-container');
+// let btnClose = document.querySelectorAll('.btn-close');
+// btnClose.forEach(btn => {
+//   btn.addEventListener("click", function() {
+//     let nonmodalContainers = this.closest('.nonmodal-container');
     
-    if(nonmodalContainers){
-      nonmodalContainers.style.display='none';
-    }
-  });
-});
+//     if(nonmodalContainers){
+//       nonmodalContainers.style.display='none';
+//     }
+//   });
+// });
 
 // 게시물 및 페이지네이션 처리
 
@@ -199,6 +206,3 @@ function setupPagination() {
   //   displayMails();
   // });
 
-
-
-  
