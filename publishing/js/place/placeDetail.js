@@ -67,6 +67,8 @@ document.addEventListener('DOMContentLoaded',()=>{
   });
 
 
+  // 발자국 톡 리뷰
+  
     //작성자가 본인이 아니라면 휴지통 아이콘 지우는 버튼 없애야하고
   //$(".reply-buttons>img[alt='삭제']").css('display','none');
 
