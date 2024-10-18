@@ -98,19 +98,18 @@
                 </div>
             </div>
         </div>
-        <div class="Day-container">
-            <button class="Day-button" type="button">
-                DAY1
-            </button>
-            <button class="Day-plus-button" type="button">+</button>
+        <div id="dayContainer" class="Day-container">
+            <button class="Day-button" type="button">DAY 1</button>
+            <button id="addDayButton" class="Day-plus-button" type="button">+</button>
         </div>
-        <div class="create-container">
+        
+        <div id="createContainer" class="create-container">
             <div class="create-box">
                 <div class="maps-API">지도입니당</div>
                 <div class="add-location">
-                    <div class="location-wrapper">
+                    <div id="locationWrapper" class="location-wrapper">
                         <input class="add-location-text" type="text" placeholder="장소를 입력해주세요." onfocus="this.placeholder=''" onblur="this.placeholder='장소를 입력해주세요.'">
-                        <button class="add-location-button" type="button">+</button>
+                        <button id="addLocationButton" class="add-location-button" type="button">+</button>
                     </div>
                 </div>
                 <div class="summernote-container">
