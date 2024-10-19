@@ -18,6 +18,7 @@ main{
 
   }
   
+  /* 조회 */
   .count-wrap{
     display: flex;
   }
@@ -28,6 +29,7 @@ main{
     margin-right: 3px;
   }
   
+  /* 신고버튼 */
   .reportimg{
     width: 20px;
     height: 23px;
@@ -40,6 +42,7 @@ main{
     display: none; /* 초기 상태에서 모달이 보이지 않도록 설정 */
 }
 
+/* 찜하기 */
   .saveimg{
     width: 30px;
     height: 30px;
@@ -253,9 +256,9 @@ main{
     padding: 20px 35px;
 }
 
-
+/* 댓글 */
 #reply-container{
-    width:60%;
+    /* width:60%; */
     min-width: 550px;
     margin: 0 auto;
   }

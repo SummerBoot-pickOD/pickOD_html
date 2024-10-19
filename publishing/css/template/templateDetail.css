@@ -362,13 +362,9 @@ main{
 
 }
 
-*{
-    margin : 0;
-    padding:0;
-  }
-  
+/* 댓글 */
   #reply-container{
-    width:60%;
+    /* width:60%; */
     min-width: 550px;
     margin: 0 auto;
   }
