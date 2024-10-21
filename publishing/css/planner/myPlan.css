@@ -357,6 +357,19 @@ main {
   cursor: pointer;
 }
 
+/* 생긴 목록 삭제버튼 */
+.btn-delete {
+  /* writing-mode: horizontal-tb; */
+  transform: none;
+  white-space: nowrap;
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 템플릿추가부분 */
+
 .template-container{
   min-height: 700px;
 }
