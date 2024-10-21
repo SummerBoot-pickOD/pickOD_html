@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       const targetElement = document.querySelector(targetId).offsetTop; 
 
       window.scrollTo({
-        top:targetElement-69,
+        top:targetElement-111,
         behavior: 'smooth' // 부드러운 스크롤
       });
     });
