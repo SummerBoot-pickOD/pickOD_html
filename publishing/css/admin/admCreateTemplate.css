@@ -152,7 +152,19 @@ h1 {
   background-color: #FEF2F2;
 }
 
-.place-title {}
+.place-title {
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  color: navy;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.place-title:hover {
+  cursor: pointer;
+}
 
 .location-descr {
   width: 100%;
@@ -193,5 +205,74 @@ h1 {
 
 .txt-addimg {
   font-size: 15px;
-  padding: 15px 0px;
+  padding-top: 15px;
+}
+
+.map-container,
+.rec-container {
+  background-color: #FEF2F2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.map-title,
+.related-area {
+  font-size: 20px;
+}
+
+#map {
+  display: flex;
+  width: 90%;
+  background-color: #A1A1A1;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.rec-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+}
+
+.rel-locations {
+  padding-top: 10px;
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+}
+
+#rel-loc1,
+#rel-loc2,
+#rel-loc3 {
+  border: 1px solid #D9D9D9;
+  padding: 3px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.adm-buttons {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save,
+.publish {
+  cursor: pointer;
+  color: white;
+  background-color: #845AC6;
+  padding: 5px 10px;
+  font-size: 15px;
+  border-radius: 2px;
+  border: none;
+  margin-left: 10px;
 }

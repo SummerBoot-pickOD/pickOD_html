@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     this.placeholder = '템플릿 제목';
   });
 
-  // DAY, 장소 태그 
+  // DAY1..., 장소1... 태그 
   let currDay = 1;
   let currLocation = 1;
   let days = {
