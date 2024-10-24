@@ -30,14 +30,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // reportimg 클릭 이벤트
-  const reportImg = document.querySelector('.reportimg');
-  if (reportImg) {
-      reportImg.addEventListener('click', function () {
-          // 모달을 열기
-          $(".modal-container").css("display", "block");
-      });
-  }
+  // const reportImg = document.querySelector('.reportimg');
+  // if (reportImg) {
+  //     reportImg.addEventListener('click', function () {
+  //         // 모달을 열기
+  //         $(".modal-container").css("display", "block");
+  //     });
+  // }
 });
+$(".reportimg").click(function(){
+  $(".modal-container").css("display","block");
+});
+
     // 모든 .place 요소에 대해 클릭 이벤트 리스너 추가
     document.querySelectorAll('.place').forEach(place => {
         const places = document.querySelectorAll('.place');
