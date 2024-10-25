@@ -12,7 +12,7 @@
 <body>
   <div id="header"></div>
   <main>
-    <h1>템플릿 작성</h1>
+    <h1>템플릿 작성하기</h1>
     <hr>
     <form action="" method="">
       <div class="temp-container">
@@ -102,11 +102,13 @@
       <button class="places active" onclick="switchLocation(1, 1)">장소1</button>
       <button class="places" onclick="switchLocation(1, 2)">장소2</button>
       <button class="places" onclick="switchLocation(1, 3)">장소3</button>
-      <button class="add-place" onclick="addLocation(1)">&#43;</button>
     </div>
 
     <div class="content-container">
-      <div class="place-title">클릭하여 장소 이름 불러오기</div>
+      <div class->
+        <div class="place-title">장소 이름 불러오기</div>
+        <!-- 클릭 시 장소 추가 모달 불러오기 하단에 코드 추가, js 코드 추가-->
+      </div>
       <div class="location-descr">
         <!-- id="location-info" 로 변경 -->
         <textarea id="place-info" placeholder="장소에 대한 설명을 입력하시오
@@ -137,28 +139,30 @@
       </div>
     </div>
 
+    <!-- 지도 API 로 마커찍기 -->
     <div class="map-container">
-      <h2>지도를 클릭하여 장소를 마킹해주세요.</h2>
+      <h2 class="map-title">지도를 클릭하여 장소를 마킹해주세요.</h2>
       <div id="map">지도 API 섹션</div>
     </div>
 
-    <!-- 일단 여기까지 수정 완료 -->
-    <!-- 여기부터 다시 수정 진행해야함  -->
-    <div class="recommendations">
-      <div class="near-location-recommend">
-        비슷한 장소
+    <!-- 비슷한 장소 추천 -->
+    <div class="rec-container">
+      <div class="rec-area">
+        <div class="related-area">
+          비슷한 장소
+        </div>
+        <div class="rel-locations">
+          <div><input id="rel-loc1" type="text" placeholder="비슷한 장소명 입력"></div>
+          <div><input id="rel-loc2" type="text" placeholder="비슷한 장소명 입력"></div>
+          <div><input id="rel-loc3" type="text" placeholder="비슷한 장소명 입력"></div>
+        </div>
       </div>
-      <a href="https://map.naver.com/p/entry/place/11571730?lng=126.9749148&lat=37.5660945&placePath=%2Fhome&entry=plt&searchType=place&c=15.00,0,0,0,dh"
-        class="near-location-recommend-button">덕수궁
-      </a>
-      <a href="https://map.naver.com/p/entry/place/11571730?lng=126.9749148&lat=37.5660945&placePath=%2Fhome&entry=plt&searchType=place&c=15.00,0,0,0,dh"
-        class="near-location-recommend-button">덕수궁
-      </a>
-      <a href="https://map.naver.com/p/entry/place/11571730?lng=126.9749148&lat=37.5660945&placePath=%2Fhome&entry=plt&searchType=place&c=15.00,0,0,0,dh"
-        class="near-location-recommend-button">덕수궁
-      </a>
     </div>
-
+    <!-- 임시저장, 템플릿 등록 버튼 -->
+    <div class="adm-buttons">
+      <button class="save" type="button">임시저장</button>
+      <button class="publish" type="button">템플릿 등록</button>
+    </div>
   </main>
   <div id="footer"></div>
 </body>
