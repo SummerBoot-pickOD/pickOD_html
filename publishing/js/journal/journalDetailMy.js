@@ -1,20 +1,34 @@
-$(document).ready(function () {
-    $("#header").load("../main/header.html", function(response, status, xhr) {
-        if (status == "error") {
-            console.log("Error: " + xhr.status + " - " + xhr.statusText);
-        }
-    });
-
-    $("#footer").load("../main/footer.html", function(response, status, xhr) {
-        if (status == "error") {
-            console.log("Error: " + xhr.status + " - " + xhr.statusText);
-        }
-    });
+$(function () {
+  $("#header").load("../main/header.html");
 });
+
+$(function () {
+  $("#footer").load("../main/footer.html");
+});
+
+$(function () {
+  $("#report").load("../report/reportSend.html");
+});
+
 
 //작성자가 본인이 아니라면 휴지통 아이콘 지우는 버튼 없애야하고
 //$(".reply-buttons>img[alt='삭제']").css('display','none');
 
+$(".reportimg").click(function(){
+  $(".modal-container").css("display","block");
+});
+
+ // 모달 닫기 버튼 이벤트
+ $(".close-modal").click(function() {
+  $(".modal-container").css("display", "none");
+});
+
+// 모달 영역 외부 클릭 시 모달 닫기
+$(window).click(function(event) {
+  if ($(event.target).hasClass('modal-container')) {
+      $(".modal-container").css("display", "none");
+  }
+});
 
 //등록버튼 누르면 아래에 댓글 추가
 $("#submit-reply").click(function(){

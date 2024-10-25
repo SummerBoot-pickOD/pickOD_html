@@ -42,6 +42,19 @@ $(".reportimg").click(function(){
   $(".modal-container").css("display","block");
 });
 
+ // 모달 닫기 버튼 이벤트
+ $(".close-modal").click(function() {
+  $(".modal-container").css("display", "none");
+});
+
+// 모달 영역 외부 클릭 시 모달 닫기
+$(window).click(function(event) {
+  if ($(event.target).hasClass('modal-container')) {
+      $(".modal-container").css("display", "none");
+  }
+});
+
+
     // 모든 .place 요소에 대해 클릭 이벤트 리스너 추가
     document.querySelectorAll('.place').forEach(place => {
         const places = document.querySelectorAll('.place');
