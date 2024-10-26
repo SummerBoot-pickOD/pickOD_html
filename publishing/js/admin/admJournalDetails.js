@@ -41,15 +41,15 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   //쪽지 보내기 상세보기 모달 
-  // const openMessage = document.querySelector('.message');
+  const openMessage = document.querySelector('.message-button');
   const msgModal = document.querySelector('.sendmsg-container');
   const closeModal = document.querySelector('.message-close');
   const sendMsg = document.querySelector(".send-msg")
 
   //쪽지 보내기 모달 띄우기
-  // openMessage.addEventListener("click", function () {
-  //   msgModal.style.display = "flex";
-  // })
+  openMessage.addEventListener("click", function () {
+    msgModal.style.display = "flex";
+  })
 
   //쪽지 보내기 모달 닫기
   closeModal.addEventListener("click", function () {

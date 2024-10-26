@@ -15,31 +15,113 @@
 <body>
   <div id="header"></div>
   <main>
-    <h1>
-      아침 7시 기준, 업데이트 된 여행 발자국 상세가 없어서 우선 기다리는 중입니다.</h1>
-
-    <h1>
-      html, js는 일단 넣을 수 있는 것들은 넣었고,
-      css도 하기는 했지만, 나중에 그 실제 페이지 보고 수정이 필요할 것 같아요.
-      버튼 정렬까지는 맞춰져있습니다.</h1>
-    <h1>댓글 보기 버튼의 경우 원래 댓글 박스 안에 있어야하는데 그 부분이 발자국 상세 페이지에 없어서
-      정확한 위치 css는 아직입니다. </h1>
-    <h1>신고하기 아이콘의 경우도 동일합니다.</h1>
-    <h1>모달 원래는 숨김인데, 지금은 그냥 flex 하고 뜨는 위치도 이 글 보이라고 옆에 찌부시켰어요.</h1>
-    <h1>그래도 닫기, 쪽지 보내기 버튼은 클릭 가능해요.</h1>
+    <div class="title-containerbox">
+      수도권 힐링 여행
+    </div>
     <div class="report">
       <!-- 신고 여부 Y면 빨간색 신고 아이콘, N면 검정 신고 아이콘 -->
       <img id="report-icon" src="" alt="신고아이콘"></a>
     </div>
+    <div class="container-display">
+      <div class="profile-container">
+        <div class="profile">
+          <div class="photo"></div>
+          <div class="user-name-container">
+            <div class="user-name">
+              신현식
+            </div>
+            <div class="message-button">
+              <img src="../../img/message/쪽지함.png" alt="이미지 버튼" />
+            </div>
+          </div>
+        </div>
+        <div class="explain-container">
+          간략한 설명이 들어가는 곳
+          간략한 설명이 들어가는 곳
+          간략한 설명이 들어가는 곳
+          간략한 설명이 들어가는 곳
+          간략한 설명이 들어가는 곳
+          간략한 설명이 들어가는 곳
+          간략한 설명이 들어가는 곳
+        </div>
+      </div>
+      <div class="tag-container">
+        <div class="tag-container-schedule">
+          <img class="footprint" src="../../img/journal/footprint_pink.png" alt="">
+          <div class="schedule-container">
+            <div class="schedule">
+              일정
+            </div>
+            <div class="schedule-content">
+              당일여행
+            </div>
+          </div>
+        </div>
+        <div class="tag-container-schedule">
+          <img class="footprint" src="../../img/journal/footprint_pink.png" alt="">
+          <div class="tag-select-container">
+            <div class="schedule-tag">
+              태그
+            </div>
+            <div class="schedule-tag-content">
+              #친구와 함께
+            </div>
+          </div>
+        </div>
+        <div class="tag-container-schedule">
+          <img class="footprint" src="../../img/journal/footprint_pink.png" alt="">
+          <div class="thema-container">
+            <div class="schedule-thema">
+              테마
+            </div>
+            <div class="schedule-thema-content">
+              힐링
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="Day-container">
+      <div class="Day">
+        DAY1
+      </div>
+    </div>
+    <div class="detail-container">
+      <div class="detail-box">
+        <div class="maps-API">지도입니당</div>
+        <div class="location">
+          <div class="location-text">경기도미술관</div>
+          <div class="location-text">노적봉공원</div>
+          <div class="location-text">성호공원</div>
+        </div>
+        <div class="detail-content-container">
+          <div class="detail-photo">
+            <img class="arrow left-arrow" src="../../img/journal/왼쪽 화살표.png" alt="">
+            <img class="main-photo" src="../../img/journal/하단 큰 이미지.png" alt="">
+            <img class="arrow right-arrow" src="../../img/journal/오른쪽 화살표.png" alt="">
+          </div>
+          <div class="detail-text">
+            친구랑 같이 당일 수도권 여행 어쩌구 저쩌구 가려다가 미술관 가보기로 했어요.
+            기타 등등 뭐 했는지에 대한 내용들이 주절주절 들어갈거에요. 기타 등등 뭐 했는지에 대한 내용들이 주절주절 들어갈거에요.
+            기타 등등 뭐 했는지에 대한 내용들이 주절주절 들어갈거에요.기타 등등 뭐 했는지에 대한 내용들이 주절주절 들어갈거에요.
+            기타 등등 뭐 했는지에 대한 내용들이 주절주절 들어갈거에요.기타 등등 뭐 했는지에 대한 내용들이 주절주절 들어갈거에요.
+            기타 등등 뭐 했는지에 대한 내용들이 주절주절 들어갈거에요.기타 등등 뭐 했는지에 대한 내용들이 주절주절 들어갈거에요.
+            기타 등등 뭐 했는지에 대한 내용들이 주절주절 들어갈거에요.
+            기타 등등 뭐 했는지에 대한 내용들이 주절주절 들어갈거에요.
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- 관리자용 버튼만 추가됨 -->
     <div class="adm-buttons">
+      <button class="to-comment" type="button">댓글 보기</button>
       <button class="delete" type="button">삭제</button>
     </div>
-    <div class="cmt-button">
+    <!-- <div class="cmt-button">
       <button class="to-comment" type="button">댓글 보기</button>
-    </div>
+    </div> -->
 
     <!-- 쪽지 보내기 모달 -->
     <section>
