@@ -29,18 +29,33 @@ document.addEventListener('DOMContentLoaded', function() {
         console.warn('saveimg 요소를 찾을 수 없습니다.');
     }
 
-    // reportimg 클릭 이벤트
-    const reportImg = document.querySelector('.reportimg');
-    if (reportImg) {
-        reportImg.addEventListener('click', function() {
-            // 모달을 열기
-            $(".modal-container").css("display", "block");
-        });
-    }
+    // // reportimg 클릭 이벤트
+    // const reportImg = document.querySelector('.reportimg');
+    // if (reportImg) {
+    //     reportImg.addEventListener('click', function() {
+    //         // 모달을 열기
+    //         $(".modal-container").css("display", "block");
+    //     });
+    // }
     
     
 });
 
+$(".reportimg").click(function(){
+  $(".modal-container").css("display","block");
+});
+
+ // 모달 닫기 버튼 이벤트
+ $(".close-modal").click(function() {
+  $(".modal-container").css("display", "none");
+});
+
+// 모달 영역 외부 클릭 시 모달 닫기
+$(window).click(function(event) {
+  if ($(event.target).hasClass('modal-container')) {
+      $(".modal-container").css("display", "none");
+  }
+});
 
 //작성자가 본인이 아니라면 휴지통 아이콘 지우는 버튼 없애야하고
 //$(".reply-buttons>img[alt='삭제']").css('display','none');

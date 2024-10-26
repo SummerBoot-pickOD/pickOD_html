@@ -319,6 +319,15 @@ main{
     width: 24px;
     height: 24px;
   }
+
+  /* 신고버튼 */
+  .reportimg{
+    width: 20px;
+    height: 23px;
+    margin-bottom: 5px;
+    margin-right: 3px;
+    cursor: pointer;
+  }
   
   #reply-more{
     display: block;

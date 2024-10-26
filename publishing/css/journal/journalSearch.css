@@ -12,7 +12,7 @@ h2{
     font-size: 28px;
     border-bottom: 1px solid #D9D9D9;
 }
-
+/* 검색창 */
 .search-box-container{
     margin: 30px;
     width: 100%;
@@ -61,6 +61,7 @@ h2{
     cursor : pointer;
 }
 
+/* 지역 필터 */
 .total_area_wrap{
     display: flex;
     flex-direction: column;
@@ -117,6 +118,7 @@ h2{
     font-size: 12px;
   }
 
+/* 컨텐츠 메뉴 */
 .content-menu{
     display: flex;
     width: 100%;
@@ -170,9 +172,9 @@ h2{
 }
 
 .post-container {
-    margin: 50px auto;
+    margin: 10% auto;
     width: 90%;
-    height: 405px;
+    height: 86%;
     background-color: #FFF9FF;
     display: flex;
     flex-direction: column; /* 세로 방향으로 정렬 */
@@ -186,7 +188,7 @@ h2{
 
 .post-image {
     width: 80%;
-    height: 300px;
+    height: 75%;
 }
 
 .post-title {
